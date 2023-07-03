@@ -1,13 +1,12 @@
 // Скрытие шапки при скролле
 
 const header = document.querySelector('.header');
-
-let prevScrollPos = window.scrollY;
+let body = document.querySelector('body');
+let prevScrollPos = body.scrollTop;
 
 // Function to handle scroll event
 function handleScroll() {
-	const currentScrollPos = window.scrollY;
-
+	const currentScrollPos = body.scrollTop;
 	if (prevScrollPos > currentScrollPos) {
 		// Scrolling up
 		header.classList.remove('header_hidden');
@@ -17,11 +16,14 @@ function handleScroll() {
 	}
 
 	prevScrollPos = currentScrollPos;
-}
-
+};
 // Add scroll event listener
-window.addEventListener('scroll', handleScroll);
 
+
+
+body.addEventListener('scroll', () => { 
+    handleScroll()
+});
 
 
 
