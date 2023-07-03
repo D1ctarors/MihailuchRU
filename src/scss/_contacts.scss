@@ -1,0 +1,133 @@
+.contacts {
+	background: $c-sec;
+
+	h3 {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: .8;
+		margin-bottom: 25px;
+	}
+
+	&__wrap-item {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__social {
+		margin-top: 5px;
+
+		a {
+			width: 40px;
+			height: 40px;
+			border-radius: 6px;
+			box-shadow: 0px 0px 12px 0px rgba(179, 181, 191, 0.42);
+
+			i {
+				font-size: 18px;
+				line-height: 27px;
+			}
+
+			&:hover {
+				i {
+					font-size: 24px;
+					line-height: 36px;
+
+				}
+			}
+		}
+	}
+}
+
+.item {
+	// display: flex;
+	padding: 20px 25px;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.20);
+	background: $c-sec;
+	display: flex;
+	gap: 20px;
+	align-items: start;
+	cursor: pointer;
+	color: $c-white;
+	text-decoration: none;
+	transition: all .2s ease;
+
+	&:hover {
+
+		background: $c-ocean;
+		transform: scale(0.95);
+	}
+
+	&__img {
+		border-radius: 50%;
+		background: $c-sec;
+		box-shadow: 0px 0px 24px 0px rgba(15, 16, 24, 0.42);
+		width: 70px;
+		height: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 30px;
+	}
+
+	&__subtitle {
+		text-shadow: 0px 0px 24px 0px rgba(179, 181, 191, 0.42);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 24px;
+	}
+}
+
+.form {
+
+
+	textarea {
+		min-height: 210px;
+	}
+}
+
+.form-control {
+	background: transparent !important;
+	padding: 15px 20px;
+	border: 1px solid rgba(255, 255, 255, 0.20);
+
+	color: $c-white;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+
+	&::placeholder {
+		color: #70717B;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+
+	&:focus {
+		color: $c-white;
+		border: 1px solid rgba(255, 255, 255, 0.463);
+		outline: 0;
+		box-shadow: none;
+
+
+	}
+
+}

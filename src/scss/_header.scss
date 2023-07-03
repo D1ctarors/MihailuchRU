@@ -1,0 +1,37 @@
+.header {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	transition: .7s;
+	width: 100%;
+	z-index: 3;
+}
+
+.header.header_hidden {
+	transform: translateY(-100%);
+}
+
+.navbar-nav {
+
+
+	.nav-link {
+
+		color: $c-white;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 15px;
+		padding: 12px !important;
+		// align-self: start;
+
+		&:last-child() {
+			margin-left: 40px;
+		}
+
+		&:hover,
+		&.active {
+			color: $c-orange !important;
+		}
+
+
+	}
+}

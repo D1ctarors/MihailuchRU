@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "reset";
+
+// @import url("/src/bootstrap/scss/bootstrap.scss");
+
+// @import url("/src/bootstrap/scss/_functions.scss");
+// @import url("/src/bootstrap/scss/_variables.scss");
+// @import url("/src/bootstrap/scss/_mixins.scss");
+
+@import "mixins";
+@import "header";
+@import "greeting";
+@import "about";
+@import "portfolio";
+@import "skills";
+@import "reviews";
+@import "contacts";
+
+html,
+body {
+	position: relative;
+	overflow-x: hidden;
+	font-family: 'Outfit', sans-serif;
+	color: $c-white !important;
+}
+
+body {
+	background: $c-ocean !important;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.container-xxl {
+	max-width: 1440px !important;
+}
+
+.progress-bar {
+	background-color: $c-orange !important;
+
+}
+
+.primary {
+	min-height: 100vh !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 100px 0;
+
+
+	&__subtitle {
+		text-align: center;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 48px;
+	}
+
+
+
+	&__title {
+		color: $c-white;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 12px;
+		letter-spacing: 2.4px;
+		text-transform: capitalize;
+		border-radius: 4px;
+		background: #24263B;
+		padding: 12px 14px;
+		box-shadow: 0px 0px 24px 0px rgba(15, 16, 24, 0.42);
+	}
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.prm-btn {
+	text-decoration: none;
+	color: $c-white;
+	border-radius: 4px;
+	background: $c-orange;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 3;
+	padding: 0 40px;
+	text-transform: capitalize;
+}
+
+.social-link {
+	display: flex;
+	gap: 15px;
+
+	a {
+		text-decoration: none;
+		color: $c-white;
+		position: relative;
+		
+		background: $c-ocean;
+		
+		text-align: center;
+		transition: all .2s ease;
+
+		i {
+			
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: all .2s ease;
+		}
+
+		
+	}
+}

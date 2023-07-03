@@ -1,0 +1,27 @@
+// Основные цвета
+$c-white: #ffffff;
+$c-black: #0D0D0F;
+$c-orange: #FE461C;
+$c-ocean: #1F2235;
+$c-sec: #24263B;
+
+
+$screen: 1440px;
+$screen-small: 1268px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 530px;
+$mobile-small: 320px;
+
+// Медиа запросы
+@media (max-width: $screen) {}
+
+@media (max-width: $screen-small) {}
+
+@media (max-width: $tablet) {}
+
+@media (max-width: $tablet-small) {}
+
+@media (max-width: $mobile) {}
+
+@media (max-width: $mobile-small) {}
