@@ -4,10 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="/src/css/bootstrap.css"> -->
+	<!-- <link rel="stylesheet" href="/src/css/bootstrap.min.css"> -->
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" href="src/css/style.css">
 
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -30,14 +31,14 @@
 					</button>
 					<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 						<div class="navbar-nav d-flex align-items-center">
-							<a class="nav-link active" aria-current="page" href="#">Главная</a>
-							<a class="nav-link" href="#">Обо мне</a>
-							<a class="nav-link" href="#">Портфолио</a>
-							<a class="nav-link" href="#">Навыки</a>
-							<a class="nav-link" href="#">Отзывы</a>
-							<a class="nav-link" href="#">Контакты</a>
-							<a class="prm-btn" href="https://disk.yandex.ru/d/SHfqrSd2x39bCw" download="Resume"
-								target="_blank">Резюме</a>
+							<a class="nav-link active" aria-current="page" href="#greeting">Приветствие</a>
+							<a class="nav-link" href="#about">Обо мне</a>
+							<a class="nav-link" href="#portfolio">Портфолио</a>
+							<a class="nav-link" href="#skills">Навыки</a>
+							<a class="nav-link" href="#reviews">Отзывы</a>
+							<a class="nav-link" href="#contacts">Контакты</a>
+							<a class="prm-btn" style="margin-left: 40px;" href="https://disk.yandex.ru/d/SHfqrSd2x39bCw"
+								download="Resume" target="_blank">Резюме</a>
 						</div>
 					</div>
 
@@ -46,7 +47,7 @@
 		</section>
 		<section class="main">
 
-			<section class="greeting primary">
+			<section class="greeting primary parallax-wrap" id="greeting">
 				<div class="container-xxl ">
 					<div class="row d-flex justify-content-around">
 						<div class="col-6">
@@ -57,33 +58,44 @@
 								HTML ВЕРСТАЛЬЩИКА
 							</h1>
 
-							<a href="" class="btn-down mouse">
+							<a href="#about" class="btn-down mouse">
 								<span></span>
 							</a>
 						</div>
 						<div class="col-4 d-flex flex-column align-items-center justify-content-center">
-							<img class="me-photo-1 d-block" src="./src/img/greeting/me1.jpg" alt="Me-photo">
+							<!-- <img class="me-photo-1 d-block" src="./src/img/greeting/me1.jpg" alt="Me-photo"> -->
+
+							<img class="me-photo-1 d-block" src="./src/img/greeting/me2.png" alt="Me-photo">
+							<!-- <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_3rwasyjy.json"
+								background="transparent" speed="1" style="width: 100%; height: auto;" loop
+								autoplay></lottie-player> -->
+
 							<div class="greeting__social social-link">
 								<a href="https://vk.com/m1hailuch" target="_blank"><i class="fa-brands fa-vk"></i></a>
 								<a href="https://t.me/D1ctators" target="_blank"><i
 										class="fa-brands fa-telegram"></i></a>
-								<a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+								<a href="https://www.instagram.com/mihailuch74/" target="_blank"><i
+										class="fa-brands fa-instagram"></i></a>
 							</div>
 						</div>
 					</div>
 
-					<!-- <ul>
-						<li class="parallax stack-item">
-							<img src="http://placehold.it/50x50" class="cherry" alt="">
-						</li>
-						<li class="parallax stack-item">
-							<img src="http://placehold.it/50x50" class="cherry" alt="">
-						</li>
-					</ul> -->
+
 				</div>
+
+				<ul>
+					<li value="5"><img src="./src/img/projects/stack/html.svg" alt="html"></li>
+					<li value="-5"><img src="./src/img/projects/stack/css.svg" alt="css"></li>
+					<li value="13"><img src="./src/img/projects/stack/js.svg" alt="js"></li>
+					<li value="-7"><img src="./src/img/projects/stack/python.svg" alt="python"></li>
+					<li value="5"><img src="./src/img/projects/stack/django.svg" alt="django"></li>
+					<li value="-8"><img src="./src/img/projects/stack/bootstrap.svg" alt="bootstrap"></li>
+				</ul>
+
+
 			</section>
 
-			<section class="about primary">
+			<section class="about primary" id="about">
 				<div class="container-xxl">
 					<div class="row">
 						<div class="col-12 d-flex justify-content-center align-items-center mb-3">
@@ -122,7 +134,7 @@
 
 			</section>
 
-			<section class="portfolio primary">
+			<section class="portfolio primary" id="portfolio">
 				<div class="container-xxl">
 					<div class="row">
 						<div class="col-12 d-flex justify-content-center align-items-center mb-2">
@@ -137,62 +149,40 @@
 					<div class="row d-flex justify-content-around">
 						<div class="col-12">
 
-
 							<ul class="filter d-flex">
 								<li data-filter="all" class="filter__item active">Все</li>
 								<li data-filter="landing" class="filter__item">Лендинг</li>
 								<li data-filter="pet" class="filter__item">Pet-Проект</li>
 								<li data-filter="com" class="filter__item">Коммерческие</li>
-								<li data-filter="django" class="filter__item">Django</li>
+								<li data-filter="python" class="filter__item">Python</li>
 							</ul>
 						</div>
 						<div class="col-12 ">
 
-							<div class="projects-content" id="projects-content">
-								<div class="projects-content__body">
-									<div class="projects-content__close"></div>
-									<div class="container-fluid">
-										<div class="row">
-											<div class="col-4">
-												<h2 class="projects-content__name-project">Logo</h2>
-												<ul class="d-flex align-items-center gap-3">
-													<li><a href="">link1</a></li>
-													<li><a href="">link2</a></li>
-													<li><a href="">link3</a></li>
-												</ul>
-												<div class="projects-content__content">Lorem ipsum dolor sit amet
-													consectetur adipisicing elit. Consectetur temporibus quam ut beatae
-													autem et reiciendis modi cumque! Ducimus et error praesentium optio
-													fugit, ratione exercitationem totam, officia doloremque similique
-													tempore incidunt consequuntur, voluptates aliquid.
-												</div>
-												<ul
-													class="projects-content__project-stack d-flex align-items-center flex-wrap gap-3">
-													<li class="stack-item">html</li>
-													<li class="stack-item">css</li>
-													<li class="stack-item">js</li>
-												</ul>
-											</div>
-											<div class="col-8 ms-auto">
-												<div class="projects-content__image">
-													<img class="img-fluid" src="./src/img/projects/full/WebCinema.png"
-														alt="">
-												</div>
-											</div>
-										</div>
-									</div>
 
+							<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+								data-bs-target="#contentPortfolioModal">
+								Запустите демо модального окна
+							</button> -->
+
+							<!-- Модальное окно для отображения контента проекта -->
+							<div class="modal fade" id="contentPortfolioModal" tabindex="-1"
+								aria-labelledby="contentPortfolioModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+									<div class="modal-content" id="projects-content"></div>
 								</div>
 							</div>
 
-							<div id="projects-wrapper" class="grid">
+						</div>
 
-							</div>
+						<div id="projects-wrapper" class="grid">
+
+						</div>
 
 
 			</section>
 
-			<section class="skills primary">
+			<section class="skills primary" id="skills">
 				<div class="container-xl">
 					<div class="row">
 						<div class="col-12 d-flex justify-content-start align-items-start mb-3">
@@ -242,8 +232,7 @@
 
 			</section>
 
-
-			<section class="reviews primary">
+			<section class="reviews primary" id="reviews">
 				<div class="container-xxl">
 					<div class="row">
 						<div class="col-12 d-flex justify-content-center align-items-center mb-2">
@@ -255,66 +244,132 @@
 					</div>
 				</div>
 				<div class="container-xl">
-					<div class="row d-flex justify-content-around">
+					<div class="row ">
 
-
-						<div class="slide col-6">
-							<div class="slide__wrap">
-								<div class="slide__content">
-									<div class="slide__name">Михаил Левченко</div>
-									<div class="slide__company">Web - разработчик</div>
-									<div class="slide__review">Conveniently customize proactive web services fofeveraged
-										withoutan continualliery aggregate
-										customize proactive web services.</div>
-									<div class="slide__stars">
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<!-- <i class="fa-regular fa-star"></i> -->
-										<i class="fa-solid fa-star-half-stroke"></i>
+						<div class="slider-wrapper">
+							<div class="slide ">
+								<div class="slide__wrap">
+									<div class="slide__content">
+										<div class="slide__name">Михаил Левченко</div>
+										<div class="slide__company">Web - разработчик</div>
+										<div class="slide__review">Conveniently customize proactive web services
+											fofeveraged
+											withoutan continualliery aggregate
+											customize proactive web services.</div>
+										<div class="slide__stars">
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<!-- <i class="fa-regular fa-star"></i> -->
+											<i class="fa-solid fa-star-half-stroke"></i>
+										</div>
 									</div>
-								</div>
-								<div class="slide__photo"><img
-										src="https://t4.ftcdn.net/jpg/04/30/71/07/360_F_430710789_1zvZ8vxICKIbKqwlBS1iKZMBS7lQ4WDw.jpg"
-										alt=""></div>
-							</div>
-						</div>
-
-						<div class="slide col-6">
-							<div class="slide__wrap">
-								<div class="slide__content">
-									<div class="slide__name">Михаил Левченко</div>
-									<div class="slide__company">Web - разработчик</div>
-									<div class="slide__review">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quas amet nobis
-										alias fuga exercitationem sint cumque, eos tempore esse, nemo quaerat molestias,
-										tempora voluptates. Eaque ipsum neque eligendi. Harum perspiciatis quam eius
-										consequatur repudiandae, distinctio reiciendis? Voluptates ipsam voluptatem iste
-										nulla quos minus accusamus. Repudiandae adipisci aspernatur id tempore?
-									</div>
-									<div class="slide__stars">
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-regular fa-star"></i>
-										<!-- <i class="fa-solid fa-star-half-stroke"></i> -->
-									</div>
-								</div>
-								<div class="slide__photo"><img
-										src="https://t4.ftcdn.net/jpg/04/30/71/07/360_F_430710789_1zvZ8vxICKIbKqwlBS1iKZMBS7lQ4WDw.jpg"
-										alt="">
+									<div class="slide__photo"><img
+											src="https://t4.ftcdn.net/jpg/04/30/71/07/360_F_430710789_1zvZ8vxICKIbKqwlBS1iKZMBS7lQ4WDw.jpg"
+											alt=""></div>
 								</div>
 							</div>
-						</div>
 
+							<div class="slide ">
+								<div class="slide__wrap">
+									<div class="slide__content">
+										<div class="slide__name">Михаил Левченко</div>
+										<div class="slide__company">Web - разработчик</div>
+										<div class="slide__review">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quas amet
+											nobis
+											alias fuga exercitationem sint cumque, eos tempore esse, nemo quaerat
+											molestias,
+											tempora voluptates. Eaque ipsum neque eligendi. Harum perspiciatis quam eius
+											consequatur repudiandae, distinctio reiciendis? Voluptates ipsam voluptatem
+											iste
+											nulla quos minus accusamus. Repudiandae adipisci aspernatur id tempore?
+										</div>
+										<div class="slide__stars">
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-regular fa-star"></i>
+											<!-- <i class="fa-solid fa-star-half-stroke"></i> -->
+										</div>
+									</div>
+									<div class="slide__photo"><img
+											src="https://t4.ftcdn.net/jpg/04/30/71/07/360_F_430710789_1zvZ8vxICKIbKqwlBS1iKZMBS7lQ4WDw.jpg"
+											alt="">
+									</div>
+								</div>
+							</div>
+
+							<div class="slide ">
+								<div class="slide__wrap">
+									<div class="slide__content">
+										<div class="slide__name">Михаил Левченко</div>
+										<div class="slide__company">Web - разработчик</div>
+										<div class="slide__review">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quas amet
+											nobis
+											alias fuga exercitationem sint cumque, eos tempore esse, nemo quaerat
+											molestias,
+											tempora voluptates. Eaque ipsum neque eligendi. Harum perspiciatis quam eius
+											consequatur repudiandae, distinctio reiciendis? Voluptates ipsam voluptatem
+											iste
+											nulla quos minus accusamus. Repudiandae adipisci aspernatur id tempore?
+										</div>
+										<div class="slide__stars">
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-regular fa-star"></i>
+											<!-- <i class="fa-solid fa-star-half-stroke"></i> -->
+										</div>
+									</div>
+									<div class="slide__photo"><img
+											src="https://t4.ftcdn.net/jpg/04/30/71/07/360_F_430710789_1zvZ8vxICKIbKqwlBS1iKZMBS7lQ4WDw.jpg"
+											alt="">
+									</div>
+								</div>
+							</div>
+
+							<div class="slide ">
+								<div class="slide__wrap">
+									<div class="slide__content">
+										<div class="slide__name">Михаил Левченко</div>
+										<div class="slide__company">Web - разработчик</div>
+										<div class="slide__review">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quas amet
+											nobis
+											alias fuga exercitationem sint cumque, eos tempore esse, nemo quaerat
+											molestias,
+											tempora voluptates. Eaque ipsum neque eligendi. Harum perspiciatis quam eius
+											consequatur repudiandae, distinctio reiciendis? Voluptates ipsam voluptatem
+											iste
+											nulla quos minus accusamus. Repudiandae adipisci aspernatur id tempore?
+										</div>
+										<div class="slide__stars">
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-solid fa-star"></i>
+											<i class="fa-regular fa-star"></i>
+											<!-- <i class="fa-solid fa-star-half-stroke"></i> -->
+										</div>
+									</div>
+									<div class="slide__photo"><img
+											src="https://t4.ftcdn.net/jpg/04/30/71/07/360_F_430710789_1zvZ8vxICKIbKqwlBS1iKZMBS7lQ4WDw.jpg"
+											alt="">
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
 
 			</section>
 
-			<section class="contacts primary">
+			<section class="contacts primary" id="contacts">
 				<div class="container-xxl">
 					<div class="row">
 						<div class="col-12 d-flex justify-content-center align-items-center mb-2">
@@ -329,35 +384,36 @@
 					<div class="row d-flex justify-content-around">
 						<div class="col-4">
 							<div class="contacts__wrap-item">
-								<a href="tel:+7(952) 604-98-87" class="contacts__item item">
-									<div class="item__img"><img src="./src/img/contacts/phone.svg" alt=""></div>
+								<a href="tel:+7(952) 604-98-87" target="_blank" class="contacts__item item">
+									<div class="item__img"><i class="fa-solid fa-phone"></i></div>
 									<div class="item__content">
 										<div class="item__title">Телефон</div>
 										<div class="item__subtitle">+7 (952) 604-98-87</div>
 									</div>
 								</a>
 
-								<a href="mailto:mihailuch.work@yandex.ru" class="contacts__item item">
-									<div class="item__img"><img src="./src/img/contacts/email.svg" alt=""></div>
+								<a href="mailto:mihailuch.work@yandex.ru" target="_blank" class="contacts__item item">
+									<div class="item__img"><i class="fa-solid fa-envelope"></i></div>
 									<div class="item__content">
 										<div class="item__title">Email</div>
 										<div class="item__subtitle">mihailuch.work@yandex.ru</div>
 									</div>
 								</a>
 
-								<!-- <a class="contacts__item item">
-									<div class="item__img"></div>
+								<a class="contacts__item item">
+									<div class="item__img"><i class="fa-solid fa-hashtag"></i></div>
 									<div class="item__content">
 										<div class="item__title">Соцсети</div>
 										<div class="social-link contacts__social">
-											<a href="https://vk.com/m1hailuch" target="_blank"><i
-													class="fa-brands fa-vk"></i></a>
-											<a href="https://t.me/D1ctators" target="_blank"><i
-													class="fa-brands fa-telegram"></i></a>
-											<a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+											<button href="https://vk.com/m1hailuch" target="_blank"><i
+													class="fa-brands fa-vk"></i></button>
+											<button href="https://t.me/D1ctators" target="_blank"><i
+													class="fa-brands fa-telegram"></i></button>
+											<button href="https://www.instagram.com/mihailuch74/" target="_blank"><i
+													class="fa-brands fa-instagram"></i></button>
 										</div>
 									</div>
-								</a> -->
+								</a>
 
 
 							</div>
@@ -372,8 +428,8 @@
 											aria-label="Ваше имя">
 									</div>
 									<div class="col">
-										<input type="email" class="form-control" id="inputEmail" placeholder="Ваш email"
-											aria-label="Ваш email">
+										<input type="email" class="form-control" id="inputEmail"
+											placeholder="Ваша почта" aria-label="Ваша почта">
 									</div>
 								</div>
 
@@ -402,7 +458,8 @@
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center align-items-center">
 						<h5 style="margin: 0;">© 2023 - Template designed & developed by <a
-								href="https://github.com/D1ctarors" target="_blank">Mihailuch</a>.</h5>
+								href="https://github.com/D1ctarors" target="_blank"
+								style="text-decoration: none; color: #FE461C;">Mihailuch</a>.</h5>
 					</div>
 				</div>
 			</div>
@@ -420,6 +477,10 @@
 		crossorigin="anonymous"></script>
 	<!-- <script src="/src/bootstrap/dist/js/bootstrap.js"></script> -->
 
+	<!-- SLICK SLIDER -->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
 	<!-- PARALLAX -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/parallax-mouse@1.0.1/dist/parallax-mouse.min.js"></script>
 	<script>
@@ -427,8 +488,10 @@
 	</script> -->
 
 	<!-- JS -->
+
 	<script src="./src/js/main.js"></script>
 	<script src="./src/js/db.js"></script>
+	<script src="./src/js/slick-slider.js"></script>
 </body>
 
 </html>

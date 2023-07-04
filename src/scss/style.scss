@@ -22,10 +22,28 @@ body {
 	overflow-x: hidden;
 	font-family: 'Outfit', sans-serif;
 	color: $c-white !important;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 body {
 	background: $c-ocean !important;
+
+	-webkit-touch-callout: none;
+		/* iOS Safari */
+		-webkit-user-select: none;
+		/* Safari */
+		-khtml-user-select: none;
+		/* Konqueror HTML */
+		-moz-user-select: none;
+		/* Old versions of Firefox */
+		-ms-user-select: none;
+		/* Internet Explorer/Edge */
+		user-select: none;
+		/* Non-prefixed version, currently
+	                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .wrapper {
@@ -83,33 +101,84 @@ body {
 
 .prm-btn {
 	text-decoration: none;
-	color: $c-white;
+	// color: $c-white;
 	border-radius: 4px;
-	background: $c-orange;
+	// background: $c-orange;
 	text-align: center;
-	font-size: 16px;
+	// font-size: 16px;
 	font-weight: 700;
+	// letter-spacing: .8px;
 	line-height: 3;
-	padding: 0 40px;
+	// padding: 0 40px;
 	text-transform: capitalize;
+	// transition: all .2s ease;
+
+	text-decoration: none;
+	display: inline-block;
+	padding: 0px 30px;
+	margin: 15px 0;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid $c-orange;
+	background: $c-orange;
+	color: $c-white !important;
+	font-size: 16px;
+	// text-transform: uppercase;
+	transition: .2s ease-in-out;
+
+
+	&:before {
+		content: "";
+		background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+		height: 60px;
+		width: 50px;
+		position: absolute;
+		top: 0px;
+		left: -90px;
+		transform: skewX(-45deg);
+	}
+
+	&:hover {
+		background: $c-orange;
+		color: $c-white !important;
+	}
+
+	&:hover:before {
+		left: 100%;
+		transition: .5s ease-in-out;
+	}
+
+	&:focus {
+		background: $c-orange;
+		color: $c-white !important;
+		outline: none;
+	}
+
+	// &:hover {}
+
+	&:active {
+
+		transform: scale(.95);
+	}
 }
 
 .social-link {
 	display: flex;
 	gap: 15px;
 
-	a {
+	a,
+	button {
 		text-decoration: none;
 		color: $c-white;
 		position: relative;
-		
+
 		background: $c-ocean;
-		
+
 		text-align: center;
 		transition: all .2s ease;
 
 		i {
-			
+
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -117,6 +186,6 @@ body {
 			transition: all .2s ease;
 		}
 
-		
+
 	}
 }

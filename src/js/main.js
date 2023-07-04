@@ -4,6 +4,18 @@ const header = document.querySelector('.header');
 let body = document.querySelector('body');
 let prevScrollPos = body.scrollTop;
 
+// Скрытие шапки, когда открыт контент карточки проекта.
+function addHeaderHiddenClass() {
+	let modal = document.querySelector('.modal');
+	let header = document.querySelector('.header');
+
+	if (modal.classList.contains('show')) {
+		header.classList.add('header_hidden');
+	}
+}
+// addHeaderHiddenClass()
+
+
 // Function to handle scroll event
 function handleScroll() {
 	const currentScrollPos = body.scrollTop;
@@ -21,11 +33,21 @@ function handleScroll() {
 
 
 
-body.addEventListener('scroll', () => { 
-    handleScroll()
+body.addEventListener('scroll', () => {
+	handleScroll()
 });
 
+// Паралакс
+document.addEventListener("mousemove", parallax);
+function parallax(event) {
+	this.querySelectorAll(".parallax-wrap li").forEach((shift) => {
+		const position = shift.getAttribute("value");
+		const x = (window.innerWidth - event.pageX * position) / 90;
+		const y = (window.innerHeight - event.pageY * position) / 90;
 
+		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+	});
+}
 
 // Плавный скролл
 function scrollTo() {
@@ -61,6 +83,32 @@ function WorkFilter() {
 	});
 }
 WorkFilter();
+
+// добавление active - НАВИГАЦИЯ
+function giveActiveForNavigation() {
+	document.addEventListener("DOMContentLoaded", function () {
+		const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+		navLinks.forEach(function (link) {
+			link.addEventListener("click", function (event) {
+				event.preventDefault();
+
+				// Удалить класс "active" у всех ссылок
+				navLinks.forEach(function (navLink) {
+					navLink.classList.remove("active");
+				});
+
+				// Добавить класс "active" к текущей ссылке
+				link.classList.add("active");
+
+				// Прокрутить до якорной ссылки
+				const target = document.querySelector(link.getAttribute("href"));
+				target.scrollIntoView({ behavior: "smooth" });
+			});
+		});
+	});
+}
+giveActiveForNavigation();
 
 // Табы скилов
 class ItcTabs {

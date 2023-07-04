@@ -1,9 +1,16 @@
 .reviews {}
 
-.slide {
+.slider-wrapper {
+	display: flex;
+	gap: 15px;
+	justify-content: space-between;
+}
 
+.slide {
+	padding: 0 10px;
 
 	&__wrap {
+
 		height: 250px;
 		display: flex;
 		justify-content: space-around;
@@ -14,6 +21,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 20px 20px 25px 20px;
+		z-index: 3;
 	}
 
 	&__name {
@@ -67,6 +75,7 @@
 
 	&__photo {
 		min-width: 33.333%;
+		z-index: 1;
 		// height: 250px;
 		// height: auto;
 		overflow: hidden;
@@ -83,11 +92,11 @@
 		}
 
 		&::before {
-			content: url(../src/img/triangle.svg);
-			z-index: 1;
+			content: url(/src/img/triangle.svg);
+			z-index: 2;
 			position: absolute;
 			bottom: 20%;
-			left: -2px;
+			left: -4px;
 			width: auto;
 			height: auto;
 			// background: $c-white;

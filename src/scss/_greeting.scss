@@ -1,6 +1,7 @@
 .greeting {
 	position: relative !important;
-	padding-top: 115px !important;
+	padding-top: 50px !important;
+	overflow: hidden;
 
 	h3 {
 		text-transform: uppercase;
@@ -117,6 +118,66 @@
 	height: 10px;
 	margin: 6px auto;
 	width: 4px;
+}
+
+.me-photo-1 {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.parallax-wrap li {
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -3;
+	opacity: 0.4;
+	background: $c-black;
+
+	img {
+		height: 40px;
+		width: 40px;
+	}
+}
+
+.parallax-wrap li:nth-child(1) {
+	top: 70%;
+	left: 10%;
+}
+
+.parallax-wrap li:nth-child(2) {
+	top: 15%;
+	left: 85%;
+}
+
+.parallax-wrap li:nth-child(3) {
+	top: 20%;
+	left: 60%;
+}
+
+.parallax-wrap li:nth-child(4) {
+	top: 60%;
+	left: 55%;
+}
+
+.parallax-wrap li:nth-child(5) {
+	top: 50%;
+	left: 30%;
+}
+
+.parallax-wrap li:nth-child(6) {
+	top: 10%;
+	left: 10%;
+}
+
+@media (max-width: 992px) {
+	.parallax-wrap li {
+		display: none;
+	}
 }
 
 @keyframes scroll {
