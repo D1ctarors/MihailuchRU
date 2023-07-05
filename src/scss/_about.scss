@@ -17,6 +17,16 @@
 		border-radius: 50%;
 		z-index: 0;
 
+		@media (max-width:992px) {
+			width: 280px;
+			height: 280px;
+			top: 30%;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
 		// img{
 		// 	display: block;
 		// 	width: 100%;
@@ -27,6 +37,13 @@
 
 	img {
 		z-index: 1;
+		height: auto;
+		width: 100%;
+		margin-bottom: 20px;
+
+		@media (max-width: 530px) {
+			width: 65% !important;
+		}
 	}
 
 	.lottie-player {
@@ -56,8 +73,18 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 
+		@media (max-width:992px) {
+			max-height: 100%;
+			margin-bottom: 0;
+
+		}
+
 		li {
 			margin-bottom: 20px;
+
+			@media (max-width:992px) {
+				margin-bottom: 10px;
+			}
 
 			&:last-child() {
 				margin-bottom: 0;
@@ -70,6 +97,8 @@
 				font-weight: 500;
 				line-height: 26px;
 				margin-left: 5px;
+
+
 			}
 		}
 	}

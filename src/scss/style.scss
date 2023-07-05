@@ -32,19 +32,20 @@ body {
 	background: $c-ocean !important;
 
 	-webkit-touch-callout: none;
-		/* iOS Safari */
-		-webkit-user-select: none;
-		/* Safari */
-		-khtml-user-select: none;
-		/* Konqueror HTML */
-		-moz-user-select: none;
-		/* Old versions of Firefox */
-		-ms-user-select: none;
-		/* Internet Explorer/Edge */
-		user-select: none;
-		/* Non-prefixed version, currently
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
 	                                  supported by Chrome, Edge, Opera and Firefox */
 }
+
 
 .wrapper {
 	display: flex;
@@ -69,16 +70,9 @@ body {
 	align-items: center;
 	padding: 100px 0;
 
-
-	&__subtitle {
-		text-align: center;
-		font-size: 36px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 48px;
+	@media (max-width: 530px) {
+		min-height: 100% !important;
 	}
-
-
 
 	&__title {
 		color: $c-white;
@@ -92,6 +86,22 @@ body {
 		background: #24263B;
 		padding: 12px 14px;
 		box-shadow: 0px 0px 24px 0px rgba(15, 16, 24, 0.42);
+
+		@media (max-width: 768px) {
+			font-size: 14px;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 48px;
+
+		@media (max-width: 768px) {
+			font-size: 36px;
+		}
 	}
 }
 
@@ -101,18 +111,11 @@ body {
 
 .prm-btn {
 	text-decoration: none;
-	// color: $c-white;
 	border-radius: 4px;
-	// background: $c-orange;
 	text-align: center;
-	// font-size: 16px;
 	font-weight: 700;
-	// letter-spacing: .8px;
 	line-height: 3;
-	// padding: 0 40px;
 	text-transform: capitalize;
-	// transition: all .2s ease;
-
 	text-decoration: none;
 	display: inline-block;
 	padding: 0px 30px;
@@ -123,7 +126,6 @@ body {
 	background: $c-orange;
 	color: $c-white !important;
 	font-size: 16px;
-	// text-transform: uppercase;
 	transition: .2s ease-in-out;
 
 
@@ -168,6 +170,7 @@ body {
 
 	a,
 	button {
+		display: block;
 		text-decoration: none;
 		color: $c-white;
 		position: relative;

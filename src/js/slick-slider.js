@@ -7,6 +7,18 @@ $(document).ready(function () {
 		autoplaySpeed: 10000,
 		dots: false,
 		prevArrow: false,
-		nextArrow: false
-  });
+		nextArrow: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					
+				}
+			},
+			
+		]
+	});
 });

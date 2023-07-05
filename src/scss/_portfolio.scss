@@ -148,6 +148,26 @@
 	grid-row: span 2;
 }
 
+@media (max-width: 530px) {
+	.grid {
+		justify-content: center;
+		grid-template-columns: repeat(auto-fit, minmax(32%, 80%));
+	}
+
+	.grid .wide {
+		grid-column: span 1;
+	}
+
+	.grid .tall {
+		grid-row: span 1;
+	}
+
+	.grid .big {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+}
+
 
 // .grid-box:nth-child(2) {
 // 	grid-row: span 2;
@@ -173,7 +193,9 @@
 
 .modal {
 	// overflow: hidden;
+
 }
+
 
 .modal-content {
 	border-radius: 15px;
