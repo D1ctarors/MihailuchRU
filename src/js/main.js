@@ -1,41 +1,61 @@
 // Скрытие шапки при скролле
-
 const header = document.querySelector('.header');
 let body = document.querySelector('body');
 let prevScrollPos = body.scrollTop;
+const modal = document.querySelector('.modal');
 
-// Скрытие шапки, когда открыт контент карточки проекта.
-function addHeaderHiddenClass() {
-	let modal = document.querySelector('.modal');
-	let header = document.querySelector('.header');
+function SwitherTheme() {
 
-	if (modal.classList.contains('show')) {
-		header.classList.add('header_hidden');
+	// Выбираем кнопку
+	const btn = document.querySelector(".btn-toggle");
+	// Выбираем настройки темы из localStorage
+	const currentTheme = localStorage.getItem("theme");
+	// Если текущая тема в localStorage равна "dark"…
+	if (currentTheme == "dark") {
+		// …тогда мы используем класс .light-theme
+		document.body.classList.add("light-theme");
 	}
+
+	// Отслеживаем щелчок по кнопке
+	btn.addEventListener("click", function () {
+		// Переключаем класс .light-theme при каждом щелчке
+		document.body.classList.toggle("light-theme");
+		// Допустим, тема светлая
+		let theme = "light";
+		// Если <body> содержит класс .light-theme…
+		if (document.body.classList.contains("light-theme")) {
+			// …тогда делаем тему тёмной
+			theme = "dark";
+		}
+		// После чего сохраняем выбор в localStorage
+		localStorage.setItem("theme", theme);
+	});
 }
-// addHeaderHiddenClass()
+SwitherTheme()
+
 
 
 // Function to handle scroll event
 function handleScroll() {
 	const currentScrollPos = body.scrollTop;
-	if (prevScrollPos > currentScrollPos) {
-		// Scrolling up
+
+
+	if (modal.classList.contains('show')) {
+		// Если модальное окно открыто, добавляем класс header_hidden
+		header.classList.add('header_hidden');
+	} else if (prevScrollPos > currentScrollPos) {
+		// Если скроллируем вверх и модальное окно закрыто, удаляем класс header_hidden
 		header.classList.remove('header_hidden');
 	} else {
-		// Scrolling down
+		// Если скроллируем вниз и модальное окно закрыто, добавляем класс header_hidden
 		header.classList.add('header_hidden');
 	}
 
 	prevScrollPos = currentScrollPos;
-};
-// Add scroll event listener
+}
 
+body.addEventListener('scroll', handleScroll);
 
-
-body.addEventListener('scroll', () => {
-	handleScroll()
-});
 
 // Паралакс
 document.addEventListener("mousemove", parallax);
@@ -78,6 +98,22 @@ function WorkFilter() {
 		}
 		$('.filter__item').removeClass('active');
 		$(this).addClass('active');
+
+		// Получаем количество оставшихся карточек после фильтрации
+		const filteredCardsCount = $('.portfolio__card:visible').length;
+
+		// Проверяем, осталось ли меньше 4х карточек
+		if (filteredCardsCount < 4) {
+			// Изменяем размеры карточек на маленькие
+			$('.grid .wide').removeClass('wide').addClass('no-width');
+			$('.grid .tall').removeClass('tall').addClass('no-height');
+			$('.grid .big').removeClass('big').addClass('no-width no-height');
+		} else {
+			// Возвращаем обычные размеры карточек
+			$('.grid .no-width').removeClass('no-width').addClass('wide');
+			$('.grid .no-height').removeClass('no-height').addClass('tall');
+			$('.grid .no-width.no-height').removeClass('no-width no-height').addClass('big');
+		}
 
 		return false;
 	});
@@ -159,70 +195,3 @@ class ItcTabs {
 	}
 }
 new ItcTabs('.tabs');
-
-
-
-
-
-
-// Рандом элементов в приветствии
-// const lerp = (v0, v1, t) => v0 * (1 - t) + v1 * t;
-// const SVG_NS = "http://www.w3.org/2000/svg";
-
-// const svg = document.querySelector(".cherry");
-// const block = document.querySelector(".me-photo-1");
-// const blockRect = block.getBoundingClientRect();
-
-// const cellWidthRange = { min: 24, max: 96 };
-// const cellHeightRange = { min: 24, max: 96 };
-// const radius = 12;
-
-// function isIntersectRects(r1, r2) {
-// 	return !(
-// 		r2.x > r1.x + r1.width ||
-// 		r2.x + r2.width < r1.x ||
-// 		r2.y > r1.y + r1.height ||
-// 		r2.y + r2.height < r1.y
-// 	);
-// }
-
-// function createSubdivRange(fromTo, minMax) {
-// 	const out = [];
-// 	let position = fromTo.from;
-
-// 	do {
-// 		const size = lerp(minMax.min, minMax.max, Math.random());
-// 		out.push({ position, size });
-// 		position += size;
-// 	} while (position < fromTo.to);
-
-// 	return out;
-// }
-
-// const cols = createSubdivRange({ from: 0, to: svg.clientWidth }, cellWidthRange);
-// const rows = createSubdivRange({ from: 0, to: svg.clientHeight }, cellHeightRange);
-
-// for (let ci = 0; ci < cols.length; ci++) {
-// 	for (let ri = 0; ri < rows.length; ri++) {
-// 		const { position: x, size: width } = cols[ci];
-// 		const { position: y, size: height } = rows[ri];
-
-// 		const cx = lerp(x + radius, x + width - radius, Math.random());
-// 		const cy = lerp(y + radius, y + height - radius, Math.random());
-
-// 		const isIntersects = isIntersectRects(blockRect, {
-// 			x: cx - radius,
-// 			y: cy - radius,
-// 			width: radius * 2,
-// 			height: radius * 2
-// 		});
-
-// 		if (!isIntersects) {
-// 			const circle = document.createElementNS(SVG_NS, "circle");
-// 			circle.setAttributeNS(null, "cx", cx);
-// 			circle.setAttributeNS(null, "cy", cy);
-// 			circle.setAttributeNS(null, "r", radius);
-// 			svg.appendChild(circle);
-// 		}
-// 	}
-// }

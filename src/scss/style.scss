@@ -7,7 +7,10 @@
 // @import url("/src/bootstrap/scss/_variables.scss");
 // @import url("/src/bootstrap/scss/_mixins.scss");
 
+
 @import "mixins";
+@import "preload";
+
 @import "header";
 @import "greeting";
 @import "about";
@@ -22,6 +25,8 @@ body {
 	overflow-x: hidden;
 	font-family: 'Outfit', sans-serif;
 	color: $c-white !important;
+	transition: background-color 0.3s ease !important;
+	transition: color 0.3s ease !important;
 
 	::-webkit-scrollbar {
 		display: none;
@@ -30,21 +35,170 @@ body {
 
 body {
 	background: $c-ocean !important;
-
 	-webkit-touch-callout: none;
-	/* iOS Safari */
 	-webkit-user-select: none;
-	/* Safari */
 	-khtml-user-select: none;
-	/* Konqueror HTML */
 	-moz-user-select: none;
-	/* Old versions of Firefox */
 	-ms-user-select: none;
-	/* Internet Explorer/Edge */
 	user-select: none;
-	/* Non-prefixed version, currently
-	                                  supported by Chrome, Edge, Opera and Firefox */
+	color: $c-white !important;
+	transition: background-color 0.3s ease !important;
+	transition: color 0.3s ease !important;
 }
+
+body.light-theme {
+	color: $c-granite !important;
+	background: $c-gray !important;
+
+	.social-link a i,
+	.social-link button i {
+		color: $c-night-blue;
+		background: inherit;
+	}
+
+	.social-link a,
+	.social-link button {
+		background: inherit;
+
+	}
+
+	.about,
+	.skills,
+	.contacts {
+		background: $c-white !important;
+	}
+
+	.header {
+		background: $c-gray !important;
+		color: $c-granite !important;
+		transition: background-color 0.3s ease !important;
+		transition: color 0.3s ease !important;
+
+		.prm-btn {
+			color: $c-white !important;
+		}
+
+		a {
+			color: $c-granite !important;
+		}
+
+		svg path {
+			fill: #24263B;
+		}
+	}
+
+	a {
+		// color: $c-granite !important;
+	}
+
+	// .social-link a,button{}
+
+	.greeting {
+		&__social a {
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		li {
+			background: $c-white !important;
+
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	.mouse {
+		border: 2px solid $c-granite;
+
+		span {
+			background: none repeat scroll 0 0 $c-granite;
+		}
+	}
+
+	.primary__title {
+		background: $c-white !important;
+
+		// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	.about__photo-bg {
+		background: $c-night-blue !important;
+	}
+
+	.about li a {
+		color: $c-granite !important;
+	}
+
+	.stack-item {
+		background: $c-white !important;
+	}
+
+	.grid-box {
+
+		background: $c-white !important;
+	}
+
+	.portfolio__card-content {
+		color: $c-white !important;
+	}
+
+	.modal-content {
+
+		// background-color: $c-gray !important;
+		background-color: rgb(102, 105, 135) !important;
+	}
+
+	.projects-content__content {
+		color: $c-white !important;
+	}
+
+	.tabs__btn {
+		background: $c-white !important;
+		color: $c-granite !important;
+	}
+
+	.slide__wrap {
+		color: $c-granite !important;
+		background: $c-white !important;
+	}
+
+	.slide__company::before {
+
+		background: $c-granite !important;
+	}
+
+	.slide__photo::before {
+		content: url("data:image/svg+xml,%3Csvg width='21' height='28' viewBox='0 0 21 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 14L0.750001 27.8564L0.750002 0.143593L21 14Z' fill='%23fdfff5'/%3E%3C/svg%3E%0A");
+		z-index: 2;
+		position: absolute;
+		bottom: 20%;
+		left: -4px;
+		width: auto;
+		height: auto;
+	}
+
+	.item {
+
+		border: 1px solid $c-granite;
+		background: $c-white;
+		color: $c-granite;
+
+		&__img {
+			background: $c-white !important;
+		}
+	}
+
+	.dropdown-menu {
+		padding: 10px;
+		background: $c-white;
+	}
+
+	.form-control {
+		color: $c-granite;
+		border: 1px solid $c-granite;
+	}
+
+
+}
+
 
 
 .wrapper {
@@ -59,7 +213,6 @@ body {
 
 .progress-bar {
 	background-color: $c-orange !important;
-
 }
 
 .primary {
@@ -75,7 +228,7 @@ body {
 	}
 
 	&__title {
-		color: $c-white;
+
 		text-align: center;
 		font-size: 16px;
 		font-weight: 600;
@@ -172,7 +325,7 @@ body {
 	button {
 		display: block;
 		text-decoration: none;
-		color: $c-white;
+
 		position: relative;
 
 		background: $c-ocean;
@@ -181,7 +334,7 @@ body {
 		transition: all .2s ease;
 
 		i {
-
+			color: $c-white;
 			position: absolute;
 			top: 50%;
 			left: 50%;

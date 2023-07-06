@@ -159,13 +159,33 @@ input:focus:-ms-input-placeholder {
   transition: opacity 0.2s ease;
 }
 
+#p_prldr {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #24263B;
+  z-index: 10000000;
+}
+
+.contpre small {
+  font-size: 25px;
+}
+
+.contpre {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .header {
   position: sticky;
   background: #1F2235;
   top: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
   width: 100%;
   z-index: 10000;
 }
@@ -393,8 +413,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .parallax-wrap li:nth-child(6) {
-  top: 10%;
-  left: 10%;
+  top: 0%;
+  left: 30%;
 }
 
 @media (max-width: 992px) {
@@ -970,6 +990,9 @@ input:focus:-ms-input-placeholder {
 @media (max-width: 992px) {
   .contacts__wrap-item {
     margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -1172,6 +1195,12 @@ body {
   overflow-x: hidden;
   font-family: "Outfit", sans-serif;
   color: #fdfff5 !important;
+  -webkit-transition: background-color 0.3s ease !important;
+  -o-transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
+  -webkit-transition: color 0.3s ease !important;
+  -o-transition: color 0.3s ease !important;
+  transition: color 0.3s ease !important;
 }
 html ::-webkit-scrollbar,
 body ::-webkit-scrollbar {
@@ -1181,17 +1210,130 @@ body ::-webkit-scrollbar {
 body {
   background: #1F2235 !important;
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Old versions of Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
+  color: #fdfff5 !important;
+  -webkit-transition: background-color 0.3s ease !important;
+  -o-transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
+  -webkit-transition: color 0.3s ease !important;
+  -o-transition: color 0.3s ease !important;
+  transition: color 0.3s ease !important;
+}
+
+body.light-theme {
+  color: rgba(13, 13, 15, 0.8) !important;
+  background: #EDEDED !important;
+}
+body.light-theme .social-link a i,
+body.light-theme .social-link button i {
+  color: rgba(36, 38, 59, 0.75);
+  background: inherit;
+}
+body.light-theme .social-link a,
+body.light-theme .social-link button {
+  background: inherit;
+}
+body.light-theme .about,
+body.light-theme .skills,
+body.light-theme .contacts {
+  background: #fdfff5 !important;
+}
+body.light-theme .header {
+  background: #EDEDED !important;
+  color: rgba(13, 13, 15, 0.8) !important;
+  -webkit-transition: background-color 0.3s ease !important;
+  -o-transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
+  -webkit-transition: color 0.3s ease !important;
+  -o-transition: color 0.3s ease !important;
+  transition: color 0.3s ease !important;
+}
+body.light-theme .header .prm-btn {
+  color: #fdfff5 !important;
+}
+body.light-theme .header a {
+  color: rgba(13, 13, 15, 0.8) !important;
+}
+body.light-theme .header svg path {
+  fill: #24263B;
+}
+body.light-theme .greeting__social a {
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+body.light-theme .greeting li {
+  background: #fdfff5 !important;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+body.light-theme .mouse {
+  border: 2px solid rgba(13, 13, 15, 0.8);
+}
+body.light-theme .mouse span {
+  background: none repeat scroll 0 0 rgba(13, 13, 15, 0.8);
+}
+body.light-theme .primary__title {
+  background: #fdfff5 !important;
+}
+body.light-theme .about__photo-bg {
+  background: rgba(36, 38, 59, 0.75) !important;
+}
+body.light-theme .about li a {
+  color: rgba(13, 13, 15, 0.8) !important;
+}
+body.light-theme .stack-item {
+  background: #fdfff5 !important;
+}
+body.light-theme .grid-box {
+  background: #fdfff5 !important;
+}
+body.light-theme .portfolio__card-content {
+  color: #fdfff5 !important;
+}
+body.light-theme .modal-content {
+  background-color: rgb(102, 105, 135) !important;
+}
+body.light-theme .projects-content__content {
+  color: #fdfff5 !important;
+}
+body.light-theme .tabs__btn {
+  background: #fdfff5 !important;
+  color: rgba(13, 13, 15, 0.8) !important;
+}
+body.light-theme .slide__wrap {
+  color: rgba(13, 13, 15, 0.8) !important;
+  background: #fdfff5 !important;
+}
+body.light-theme .slide__company::before {
+  background: rgba(13, 13, 15, 0.8) !important;
+}
+body.light-theme .slide__photo::before {
+  content: url("data:image/svg+xml,%3Csvg width='21' height='28' viewBox='0 0 21 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 14L0.750001 27.8564L0.750002 0.143593L21 14Z' fill='%23fdfff5'/%3E%3C/svg%3E%0A");
+  z-index: 2;
+  position: absolute;
+  bottom: 20%;
+  left: -4px;
+  width: auto;
+  height: auto;
+}
+body.light-theme .item {
+  border: 1px solid rgba(13, 13, 15, 0.8);
+  background: #fdfff5;
+  color: rgba(13, 13, 15, 0.8);
+}
+body.light-theme .item__img {
+  background: #fdfff5 !important;
+}
+body.light-theme .dropdown-menu {
+  padding: 10px;
+  background: #fdfff5;
+}
+body.light-theme .form-control {
+  color: rgba(13, 13, 15, 0.8);
+  border: 1px solid rgba(13, 13, 15, 0.8);
 }
 
 .wrapper {
@@ -1236,7 +1378,6 @@ body {
   }
 }
 .primary__title {
-  color: #fdfff5;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -1339,7 +1480,6 @@ body {
 .social-link button {
   display: block;
   text-decoration: none;
-  color: #fdfff5;
   position: relative;
   background: #1F2235;
   text-align: center;
@@ -1349,6 +1489,7 @@ body {
 }
 .social-link a i,
 .social-link button i {
+  color: #fdfff5;
   position: absolute;
   top: 50%;
   left: 50%;

@@ -73,7 +73,7 @@ const dataPortfolioCardItem = [
 
 	// 11 - WebCinema
 	{
-		photoPrewiew: './src/img/projects/11/11_prev.jpg',
+		photoPrewiew: './src/img/projects/11/11_prev.png',
 		titlePrewiew: 'WebCinema',
 		subtitlePrewiew: 'Онлайн-кинотеатр',
 		filter: 'f_all f_pet f_python', // f_all f_landing f_pet f_com f_python 
@@ -271,6 +271,8 @@ const dataPortfolioCardItem = [
 
 ];
 
+
+
 function createPortfolioItem() {
 	// Вставка карточек
 	let item = "";
@@ -318,7 +320,7 @@ function displayProjectData(data) {
         <button type="button" class="btn-close projects-content__close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4">
               <h2 class="projects-content__name-project"><img src="${data.logo}" alt="${data.titlePreview}"></h2>
               <ul class="projects-content__link-project d-flex align-items-center gap-3 ">
                 <li><a href="${githubLink}" target="_blank"><img src="/src/img/projects/links/git.svg" alt="github"></a></li>
@@ -336,7 +338,7 @@ function displayProjectData(data) {
 			.join("")}
               </ul>
             </div>
-            <div class="col-7 ms-auto">
+            <div class="col-lg-7 ms-auto">
               <div class="projects-content__image">
                 <img class="img-fluid" src="${data.fullImage}" alt="${data.titlePreview}">
               </div>

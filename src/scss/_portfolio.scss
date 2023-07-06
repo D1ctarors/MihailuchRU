@@ -191,9 +191,9 @@
 	// position: relative !important;
 }
 
-.modal {
+.modal.show {
 	// overflow: hidden;
-
+	// z-index: 2000000;
 }
 
 
