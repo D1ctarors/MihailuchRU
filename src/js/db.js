@@ -26,7 +26,7 @@ const dataPortfolioCardItem = [
 		logo: './src/img/projects/14/14_logo.svg',
 		links: {
 			githubLink: 'https://github.com/D1ctarors/MihailuchRU/',
-			figmaLink: '',
+			figmaLink: 'https://www.figma.com/file/HfzNFrzTgcaiKnyvIsHUVm/Mihailuch-.3?type=design&node-id=0%3A1&mode=design&t=ulqUCjSrqWevX65f-1',
 			globalLink: 'https://d1ctarors.github.io/MihailuchRU/',
 		},
 		stack: [html, css, js, sass, figma, bootstrap], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
@@ -37,11 +37,11 @@ const dataPortfolioCardItem = [
 
 	// 13 - Парсер lordfilm
 	{
-		photoPrewiew: './src/img/projects/12/12_prev.jpg',
+		photoPrewiew: './src/img/projects/13/13_prev.jpg',
 		titlePrewiew: 'Парсер lordfilm',
 		subtitlePrewiew: '',
 		filter: 'f_all f_pet f_python', // f_all f_landing f_pet f_com f_python 
-		logo: './src/img/projects/12/12_logo.svg',
+		logo: './src/img/projects/13/13_logo.svg',
 		links: {
 			githubLink: 'https://github.com/D1ctarors/ParsingLF',
 			figmaLink: '',
@@ -49,7 +49,7 @@ const dataPortfolioCardItem = [
 		},
 		stack: [python], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
 		description: 'Парсер фильмов с сайта lordfilm созданный на чистом python. В своё время послушил инструментом для случайной ddos-атаки).',
-		fullImage: './src/img/projects/12/12_full.png',
+		fullImage: './src/img/projects/13/13_full.png',
 		size: ' ', // wide tall big
 	},
 
@@ -98,7 +98,7 @@ const dataPortfolioCardItem = [
 		logo: './src/img/projects/10/10_logo.svg',
 		links: {
 			githubLink: 'https://github.com/D1ctarors/mihailuch.ru',
-			figmaLink: 'https://www.figma.com/file/EWtj42jfac97Hsb9HMaowf/Mihailuch.ru?type=design&node-id=860%3A537&mode=design&t=fCXdmBXx8YzrF8mM-1',
+			figmaLink: 'https://www.figma.com/file/EWtj42jfac97Hsb9HMaowf/Mihailuch-.2?type=design&node-id=0%3A1&mode=design&t=tZ2ZWAwR7nhOiDob-1',
 			globalLink: 'https://d1ctarors.github.io/mihailuch.ru/',
 		},
 		stack: [html, css, sass, js, figma], // html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
@@ -323,9 +323,9 @@ function displayProjectData(data) {
             <div class="col-lg-4">
               <h2 class="projects-content__name-project"><img loading="lazy" src="${data.logo}" alt="${data.titlePreview}"></h2>
               <ul class="projects-content__link-project d-flex align-items-center gap-3 ">
-                <li><a href="${githubLink}" target="_blank"><img loading="lazy" src="./src/img/projects/links/git.svg" alt="github"></a></li>
-                <li><a href="${globalLink}" target="_blank"><img loading="lazy" src="./src/img/projects/links/global.svg" alt=""></a></li>
-                <li><a href="${figmaLink}" target="_blank"><img loading="lazy" src="./src/img/projects/links/figma.svg" alt=""></a></li>
+                <li><a href="${githubLink}" class="link-to-source" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff; font-size: 36px;"></i></a></li>
+                <li><a href="${globalLink}" class="link-to-source" target="_blank"><i class="fa-solid fa-globe" style="color: #ffffff; font-size: 36px;"></i></a></li>
+                <li><a href="${figmaLink}" class="link-to-source" target="_blank"><i class="fa-brands fa-figma" style="color: #ffffff; font-size: 36px;"></i></a></li>
               </ul>
               <div class="projects-content__content">
                 ${data.description}
@@ -350,12 +350,24 @@ function displayProjectData(data) {
   `;
 
 	projectsContentWrapper.innerHTML = itemContent; // Обновляем содержимое модального окна
+
+	// Получаем все элементы списка
+	const projectItems = document.querySelectorAll('.projects-content__link-project li');
+
+	// Перебираем каждый элемент списка
+	projectItems.forEach(item => {
+		// Находим ссылку внутри элемента
+		const link = item.querySelector('a');
+
+		// Проверяем, если у ссылки пустой атрибут href
+		if (!link.getAttribute('href')) {
+			// Скрываем элемент списка
+			item.style.display = 'none';
+		}
+	});
 }
 
 createPortfolioItem();
-
-
-
 
 
 // Вставка табов
@@ -419,143 +431,3 @@ function createTabsItems() {
 	createProgressBars('school', data[2].tab3);
 }
 createTabsItems()
-
-
-
-
-
-
-// // Создание контента проекты - ПРОЕКТЫ-контент
-// function createContentProjectsItem() {
-
-// 	const html = '';
-
-
-// 	window.addEventListener('click', function (event) {
-
-// 		const clear = document.querySelectorAll('.projects-content__body');
-// 		clear.forEach((item) => {
-// 			item.remove();
-// 		});
-
-
-
-// 		if (event.target.hasAttribute('data-info')) {
-
-// 			const card = event.target.closest('.projects-item');
-
-
-// 			const alt = card.querySelector('.projects-item__prev').getAttribute('alt');
-
-// 			const dataItem = [{
-// 				nameProject: 'Atrium',
-// 				jointlyWatch: 'block',
-// 				jointlyText: 'Работа в команде,<br>спасибо <span><a href="https://github.com/genius192x" target="_blank" class= "select" >Genius192x</a></span > ',
-// 				description: 'Опыт коммерческой разработки. Опыт работы в команде. Вставка элементов через js. Работа с масками. Работа с PopUp. Вставка Lottie-анимации. Использование слайдеров. Адаптивная вёрстка по макету. Работа с бургером.',
-// 				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-// 				imageSrc: './img/projects-prev/content-project/Atrium.png',
-// 				filter: '',
-// 				linkToProject: 'http://atrium.edavpolzu.ru/',
-// 			},
-// 			{
-// 				nameProject: 'discounts',
-// 				jointlyWatch: 'none',
-// 				jointlyText: '',
-// 				description: 'Адаптивная вёрстка по макету. Работа с бургером.',
-// 				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-// 				imageSrc: './img/projects-prev/content-project/discounts.png',
-// 				filter: '',
-// 				linkToProject: 'https://d1ctarors.github.io/discounts/',
-// 			},
-// 			{
-// 				nameProject: 'MYS',
-// 				jointlyWatch: 'none',
-// 				jointlyText: '',
-// 				description: 'Вёрстка v1.0 по созданному макету',
-// 				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-// 				imageSrc: './img/projects-prev/content-project/',
-// 				filter: '',
-// 				linkToProject: 'https://d1ctarors.github.io/MYS/',
-// 			},
-// 			{
-// 				nameProject: 'Aperture',
-// 				jointlyWatch: 'none',
-// 				jointlyText: '',
-// 				description: 'Вёрстка по макету. Адаптации под разные размеры экрана. Создание и оптимизация нескольких FullScreen блоков. Стилизованный ScrollBar. Работа с EM, REM. Работа с оптимизацией картинок.',
-// 				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-// 				imageSrc: './img/projects-prev/content-project/aperture.png',
-// 				filter: '',
-// 				linkToProject: 'https://d1ctarors.github.io/aperture/',
-// 			},
-// 			{
-// 				nameProject: 'mtBiking',
-// 				jointlyWatch: 'none',
-// 				jointlyText: '',
-// 				description: 'Адаптивная вёрстка по макету. Работа с бургером.',
-// 				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-// 				imageSrc: './img/projects-prev/content-project/MT_BIKING.png',
-// 				filter: '',
-// 				linkToProject: 'https://d1ctarors.github.io/mtbiking/',
-// 			},
-// 			{
-// 				nameProject: 'Binary',
-// 				jointlyWatch: 'none',
-// 				jointlyText: '',
-// 				description: 'Адаптивная вёрстка по макету',
-// 				usedTools: ['<li>html</li>', '<li>css</li>', '<li>js</li>'],
-// 				imageSrc: './img/projects-prev/content-project/',
-// 				filter: '',
-// 				linkToProject: 'https://d1ctarors.github.io/binary/',
-// 			},
-// 			{
-// 				nameProject: 'activebox',
-// 				jointlyWatch: 'none',
-// 				jointlyText: '',
-// 				description: 'Вёрстка по макету',
-// 				usedTools: ['<li>html</li>', '<li>css</li>'],
-// 				imageSrc: './img/projects-prev/content-project/activebox.png',
-// 				filter: '',
-// 				linkToProject: 'https://d1ctarors.github.io/activebox/',
-// 			},
-// 			];
-// 			let item = "";
-// 			let Wrapper = document.getElementById("projects-content");
-// 			dataItem.forEach((data => {
-// 				if (alt.toLowerCase() === data.nameProject.toLowerCase()) {
-
-// 					item +=
-// 						`
-// 		<div class="projects-content__body">
-// 				<div class="projects-content__close"></div>
-// 					<div class="projects-content__header">
-// 						<h2 class="projects-content__name-project">${data.nameProject}</h2>
-// 						<div class="projects-content__jointly" style="display:${data.jointlyWatch}">${data.jointlyText}</div>
-// 					</div>
-// 					<div class="projects-content__description">
-// 						${data.description}
-// 					</div>
-// 					<h2 class="projects-content__tools-title">во время работы использовались:</h2>
-// 					<ul class="projects-content__tools">
-// 						${data.usedTools}
-// 					</ul>
-// 					<a class="projects-content__link" href="${data.linkToProject}" target="_blank">Ссылка на проект<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-// 						<path
-// 							d="M16 0.499999L14.59 1.91L20.17 7.5L-3.93402e-07 7.5L-3.0598e-07 9.5L20.17 9.5L14.58 15.08L16 16.5L24 8.5L16 0.499999Z"
-// 							fill="#ffffff"></path>
-// 					</svg></a>
-// 					<div class="projects-content__image-project"><img loading="lazy" loading="lazy" src="${data.imageSrc}"
-// 							alt="${data.nameProject}"></div>
-// 				</div>
-// 			`;
-// 				}
-
-// 			}));
-// 			Wrapper.insertAdjacentHTML("afterbegin", item);
-
-// 		}
-// 		// event.preventDefault();
-// 	});
-
-
-// }
-// // createContentProjectsItem();
