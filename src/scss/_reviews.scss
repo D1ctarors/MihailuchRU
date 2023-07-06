@@ -92,7 +92,8 @@
 		}
 
 		&::before {
-			content: url(/src/img/triangle.svg);
+			content: url("data:image/svg+xml,%3Csvg width='21' height='28' viewBox='0 0 21 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 14L0.750001 27.8564L0.750002 0.143593L21 14Z' fill='%2324263B'/%3E%3C/svg%3E%0A");
+
 			z-index: 2;
 			position: absolute;
 			bottom: 20%;

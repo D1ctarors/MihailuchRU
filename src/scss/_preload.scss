@@ -19,3 +19,8 @@
 	transform: translate(-50%,-50%);
 	
 }
+body.light-theme {
+	#p_prldr {
+			background: $c-white;
+		}
+}

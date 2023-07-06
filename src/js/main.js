@@ -1,45 +1,48 @@
 // Скрытие шапки при скролле
 const header = document.querySelector('.header');
 let body = document.querySelector('body');
-let prevScrollPos = body.scrollTop;
+// let prevScrollPos = body.scrollTop;
 const modal = document.querySelector('.modal');
 
-function SwitherTheme() {
 
-	// Выбираем кнопку
-	const btn = document.querySelector(".btn-toggle");
-	// Выбираем настройки темы из localStorage
+
+function SwitcherTheme() {
+	const btn = document.querySelector(".btn-toggle-theme");
 	const currentTheme = localStorage.getItem("theme");
-	// Если текущая тема в localStorage равна "dark"…
-	if (currentTheme == "dark") {
-		// …тогда мы используем класс .light-theme
+
+	if (currentTheme === "dark") {
 		document.body.classList.add("light-theme");
+		btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+	} else {
+		btn.innerHTML = '<i class="fa-solid fa-sun" style="color: #ffffff;"></i>';
 	}
 
-	// Отслеживаем щелчок по кнопке
 	btn.addEventListener("click", function () {
-		// Переключаем класс .light-theme при каждом щелчке
 		document.body.classList.toggle("light-theme");
-		// Допустим, тема светлая
 		let theme = "light";
-		// Если <body> содержит класс .light-theme…
+
 		if (document.body.classList.contains("light-theme")) {
-			// …тогда делаем тему тёмной
 			theme = "dark";
+			btn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+		} else {
+			btn.innerHTML = '<i class="fa-solid fa-sun" style="color: #ffffff;"></i>';
 		}
-		// После чего сохраняем выбор в localStorage
+
 		localStorage.setItem("theme", theme);
 	});
 }
-SwitherTheme()
+
+SwitcherTheme();
 
 
 
-// Function to handle scroll event
+
+// Скрытие шапки при скролле
+let prevScrollPos = document.body.scrollTop || document.documentElement.scrollTop;
 function handleScroll() {
-	const currentScrollPos = body.scrollTop;
-
-
+	const currentScrollPos = document.body.scrollTop || document.documentElement.scrollTop;
 	if (modal.classList.contains('show')) {
 		// Если модальное окно открыто, добавляем класс header_hidden
 		header.classList.add('header_hidden');
@@ -55,6 +58,7 @@ function handleScroll() {
 }
 
 body.addEventListener('scroll', handleScroll);
+
 
 
 // Паралакс
@@ -195,3 +199,6 @@ class ItcTabs {
 	}
 }
 new ItcTabs('.tabs');
+
+
+

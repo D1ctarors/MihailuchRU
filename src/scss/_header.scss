@@ -3,7 +3,7 @@
 	position: sticky;
 	background: $c-ocean;
 	top: 0;
-	
+	transition: transform .3s ease;
 	width: 100%;
 	z-index: 10000;
 
@@ -17,6 +17,7 @@
 }
 
 .header.header_hidden {
+	
 	transform: translateY(-100%);
 }
 

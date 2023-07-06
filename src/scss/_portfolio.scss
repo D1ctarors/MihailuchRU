@@ -193,7 +193,7 @@
 
 .modal.show {
 	// overflow: hidden;
-	// z-index: 2000000;
+	z-index: 2000000;
 }
 
 
@@ -206,31 +206,14 @@
 .projects-content {
 	border-radius: 15px;
 	overflow: hidden;
-	// position: fixed;
-	// top: 50%;
-	// left: 50%;
-	// transform: translate(-50%, -50%);
-	// top: 0;
-	// left: 0;
 	z-index: 5;
-	// max-width: calc(1140px - 21px);
-	// padding: 10.5px;
-	// margin: 0 auto;
 	padding: 35px;
-	// height: 80%;
-	// min-height: 530px;
-	// min-width: 1110px;
-
-
-	// opacity: 0;
-	// z-index: -3;
 	&::-webkit-scrollbar {
 		width: 0;
 		height: 0;
 	}
 
 	&__body {
-		// min-height: 100%;
 
 	}
 

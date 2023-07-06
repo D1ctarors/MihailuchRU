@@ -282,7 +282,7 @@ function createPortfolioItem() {
 		item += `
       <div class="grid-box portfolio__card ${data.filter} ${data.size}" data-bs-toggle="modal"
         data-bs-target="#contentPortfolioModal" data-index="${index}">
-        <img src="${data.photoPrewiew}" alt="${data.titlePrewiew}">
+        <img loading="lazy" src="${data.photoPrewiew}" alt="${data.titlePrewiew}">
         <div class="portfolio__card-content">
           <h4>${data.titlePrewiew}</h4>
           <h6>${data.subtitlePrewiew}</h6>
@@ -321,11 +321,11 @@ function displayProjectData(data) {
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4">
-              <h2 class="projects-content__name-project"><img src="${data.logo}" alt="${data.titlePreview}"></h2>
+              <h2 class="projects-content__name-project"><img loading="lazy" src="${data.logo}" alt="${data.titlePreview}"></h2>
               <ul class="projects-content__link-project d-flex align-items-center gap-3 ">
-                <li><a href="${githubLink}" target="_blank"><img src="/src/img/projects/links/git.svg" alt="github"></a></li>
-                <li><a href="${globalLink}" target="_blank"><img src="/src/img/projects/links/global.svg" alt=""></a></li>
-                <li><a href="${figmaLink}" target="_blank"><img src="/src/img/projects/links/figma.svg" alt=""></a></li>
+                <li><a href="${githubLink}" target="_blank"><img loading="lazy" src="./src/img/projects/links/git.svg" alt="github"></a></li>
+                <li><a href="${globalLink}" target="_blank"><img loading="lazy" src="./src/img/projects/links/global.svg" alt=""></a></li>
+                <li><a href="${figmaLink}" target="_blank"><img loading="lazy" src="./src/img/projects/links/figma.svg" alt=""></a></li>
               </ul>
               <div class="projects-content__content">
                 ${data.description}
@@ -333,14 +333,14 @@ function displayProjectData(data) {
               <ul class="projects-content__project-stack d-flex align-items-center flex-wrap gap-3">
                 ${stackItems
 			.map(
-				(stackItem) => `<li class="stack-item"><img src="${stackItem}" alt="${stackItem}"></li>`
+				(stackItem) => `<li class="stack-item"><img loading="lazy" loading="lazy" src="${stackItem}" alt="${stackItem}"></li>`
 			)
 			.join("")}
               </ul>
             </div>
             <div class="col-lg-7 ms-auto">
               <div class="projects-content__image">
-                <img class="img-fluid" src="${data.fullImage}" alt="${data.titlePreview}">
+                <img loading="lazy" loading="lazy" class="img-fluid" src="${data.fullImage}" alt="${data.titlePreview}">
               </div>
             </div>
           </div>
@@ -543,7 +543,7 @@ createTabsItems()
 // 							d="M16 0.499999L14.59 1.91L20.17 7.5L-3.93402e-07 7.5L-3.0598e-07 9.5L20.17 9.5L14.58 15.08L16 16.5L24 8.5L16 0.499999Z"
 // 							fill="#ffffff"></path>
 // 					</svg></a>
-// 					<div class="projects-content__image-project"><img src="${data.imageSrc}"
+// 					<div class="projects-content__image-project"><img loading="lazy" loading="lazy" src="${data.imageSrc}"
 // 							alt="${data.nameProject}"></div>
 // 				</div>
 // 			`;
