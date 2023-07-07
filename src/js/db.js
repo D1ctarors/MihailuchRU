@@ -19,7 +19,7 @@ const dataPortfolioCardItem = [
 
 	// 14 - Mihailuch 3.0
 	{
-		photoPrewiew: './src/img/projects/14/14_prev.jpg',
+		photoPrewiew: './src/img/projects/14/14_prev.png',
 		titlePrewiew: 'Mihailuch 3.0',
 		subtitlePrewiew: 'Сайт-портфолио (ver. 3)',
 		filter: 'f_all f_landing f_pet', // f_all f_landing f_pet f_com f_python 
@@ -30,14 +30,14 @@ const dataPortfolioCardItem = [
 			globalLink: 'https://d1ctarors.github.io/MihailuchRU/',
 		},
 		stack: [html, css, js, sass, figma, bootstrap], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: 'Опыт коммерческой разработки. Опыт работы в команде. Вставка элементов через js. Работа с масками. Работа с PopUp. Вставка Lottie-анимации. Использование слайдеров. Адаптивная вёрстка по макету. Работа с бургером.',
+		description: 'Редизайн сайта-портфолио.',
 		fullImage: './src/img/projects/14/14_full.png',
 		size: 'tall', // wide tall big
 	},
 
 	// 13 - Парсер lordfilm
 	{
-		photoPrewiew: './src/img/projects/13/13_prev.jpg',
+		photoPrewiew: './src/img/projects/13/13_prev.png',
 		titlePrewiew: 'Парсер lordfilm',
 		subtitlePrewiew: '',
 		filter: 'f_all f_pet f_python', // f_all f_landing f_pet f_com f_python 
@@ -48,14 +48,14 @@ const dataPortfolioCardItem = [
 			globalLink: '',
 		},
 		stack: [python], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: 'Парсер фильмов с сайта lordfilm созданный на чистом python. В своё время послушил инструментом для случайной ddos-атаки).',
+		description: 'Парсер фильмов с сайта lordfilm созданный на python. В своё время послужил инструментом для случайной ddos-атаки).',
 		fullImage: './src/img/projects/13/13_full.png',
 		size: ' ', // wide tall big
 	},
 
 	// 12 - PromptsGPT
 	{
-		photoPrewiew: './src/img/projects/12/12_prev.jpg',
+		photoPrewiew: './src/img/projects/12/12_prev.png',
 		titlePrewiew: 'PromptsGPT',
 		subtitlePrewiew: 'Сайт создан на GPT-3.5',
 		filter: 'f_all f_landing f_pet', // f_all f_landing f_pet f_com f_python 
@@ -66,7 +66,7 @@ const dataPortfolioCardItem = [
 			globalLink: 'https://d1ctarors.github.io/Prompts4GPT/',
 		},
 		stack: [html, css, js, sass], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: 'Попытка использования мощности GPT для создания сайтов.',
+		description: 'Попытка использования мощностей GPT для создания сайтов.',
 		fullImage: './src/img/projects/12/12_full.png',
 		size: '', // wide tall big
 	},
@@ -84,14 +84,14 @@ const dataPortfolioCardItem = [
 			globalLink: 'https://d1ctarors.github.io/WebCinema/',
 		},
 		stack: [html, css, sass, js, python, figma, bootstrap, django, sqlite3], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: '',
+		description: 'Была задумка создать онлайн-кинотеатр без рекламы, подписок и прочей фигни. Созданы макеты. Веб-приложение создано и посажено на Django. Настроена регистрация и авторизация пользователей. Подключена БД. Реализован фильтр и поиск фильмов по сайту. <br> Проект отменён, из-за недостатка желания.',
 		fullImage: './src/img/projects/11/11_full.png',
 		size: 'tall', // wide tall big
 	},
 
 	// 10 - Mihailuch 2.0
 	{
-		photoPrewiew: './src/img/projects/10/10_prev.jpg',
+		photoPrewiew: './src/img/projects/10/10_prev.png',
 		titlePrewiew: 'Mihailuch 2.0',
 		subtitlePrewiew: 'Сайт-портфолио (ver. 2)',
 		filter: 'f_all f_landing f_pet', // f_all f_landing f_pet f_com f_python 
@@ -109,7 +109,7 @@ const dataPortfolioCardItem = [
 
 	// 09 - Атриум
 	{
-		photoPrewiew: './src/img/projects/09/09_prev.jpg',
+		photoPrewiew: './src/img/projects/09/09_prev.png',
 		titlePrewiew: 'Атриум',
 		subtitlePrewiew: 'Производитель игрового оборудования и аттракционов',
 		filter: 'f_all f_landing f_com', // f_all f_landing f_pet f_com f_python 
@@ -127,7 +127,7 @@ const dataPortfolioCardItem = [
 
 	// 08 - Аквазонд
 	{
-		photoPrewiew: './src/img/projects/08/08_prev.jpg',
+		photoPrewiew: './src/img/projects/08/08_prev.png',
 		titlePrewiew: 'Аквазонд',
 		subtitlePrewiew: '',
 		filter: 'f_all f_landing f_com', // f_all f_landing f_pet f_com f_python 
@@ -145,7 +145,7 @@ const dataPortfolioCardItem = [
 
 	// 07 - Discounts
 	{
-		photoPrewiew: './src/img/projects/07/07_prev.jpg',
+		photoPrewiew: './src/img/projects/07/07_prev.png',
 		titlePrewiew: 'Discounts',
 		subtitlePrewiew: 'Покупка подписок',
 		filter: 'f_all f_pet', // f_all f_landing f_pet f_com f_python 
@@ -163,7 +163,7 @@ const dataPortfolioCardItem = [
 
 	// 06 - Mihailuch 1.0
 	{
-		photoPrewiew: './src/img/projects/06/06_prev.jpg',
+		photoPrewiew: './src/img/projects/06/06_prev.png',
 		titlePrewiew: 'Mihailuch 1.0',
 		subtitlePrewiew: 'Сайт-портфолио (ver. 1)',
 		filter: 'f_all f_landing f_pet',
@@ -181,7 +181,7 @@ const dataPortfolioCardItem = [
 
 	// 05 - Aperture
 	{
-		photoPrewiew: './src/img/projects/05/05_prev.jpg',
+		photoPrewiew: './src/img/projects/05/05_prev.png',
 		titlePrewiew: 'Aperture',
 		subtitlePrewiew: '',
 		filter: 'f_all f_landing f_pet',
@@ -199,7 +199,7 @@ const dataPortfolioCardItem = [
 
 	// 04 - MTBiking
 	{
-		photoPrewiew: './src/img/projects/04/04_prev.jpg',
+		photoPrewiew: './src/img/projects/04/04_prev.png',
 		titlePrewiew: 'MTBiking',
 		subtitlePrewiew: '',
 		filter: 'f_all f_landing f_pet',
@@ -217,7 +217,7 @@ const dataPortfolioCardItem = [
 
 	// 03 - Binary
 	{
-		photoPrewiew: './src/img/projects/03/03_prev.jpg',
+		photoPrewiew: './src/img/projects/03/03_prev.png',
 		titlePrewiew: 'Binary',
 		subtitlePrewiew: '',
 		filter: 'f_all f_landing f_pet',
@@ -235,7 +235,7 @@ const dataPortfolioCardItem = [
 
 	// 02 - ActiveBox
 	{
-		photoPrewiew: './src/img/projects/02/02_prev.jpg',
+		photoPrewiew: './src/img/projects/02/02_prev.png',
 		titlePrewiew: 'ActiveBox',
 		subtitlePrewiew: '',
 		filter: 'f_all f_landing f_pet',
@@ -253,7 +253,7 @@ const dataPortfolioCardItem = [
 
 	// Travel
 	{
-		photoPrewiew: './src/img/projects/01/01_prev.jpg',
+		photoPrewiew: './src/img/projects/01/01_prev.png',
 		titlePrewiew: 'Travel',
 		subtitlePrewiew: '',
 		filter: 'f_all f_landing f_pet',
@@ -282,7 +282,7 @@ function createPortfolioItem() {
 		item += `
       <div class="grid-box portfolio__card ${data.filter} ${data.size}" data-bs-toggle="modal"
         data-bs-target="#contentPortfolioModal" data-index="${index}">
-        <img loading="lazy" src="${data.photoPrewiew}" alt="${data.titlePrewiew}">
+        <img  src="${data.photoPrewiew}" alt="${data.titlePrewiew}">
         <div class="portfolio__card-content">
           <h4>${data.titlePrewiew}</h4>
           <h6>${data.subtitlePrewiew}</h6>
@@ -321,7 +321,7 @@ function displayProjectData(data) {
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4">
-              <h2 class="projects-content__name-project"><img loading="lazy" src="${data.logo}" alt="${data.titlePreview}"></h2>
+              <h2 class="projects-content__name-project"><img src="${data.logo}" alt="${data.titlePreview}"></h2>
               <ul class="projects-content__link-project d-flex align-items-center gap-3 ">
                 <li><a href="${githubLink}" class="link-to-source" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff; font-size: 36px;"></i></a></li>
                 <li><a href="${globalLink}" class="link-to-source" target="_blank"><i class="fa-solid fa-globe" style="color: #ffffff; font-size: 36px;"></i></a></li>
@@ -333,14 +333,14 @@ function displayProjectData(data) {
               <ul class="projects-content__project-stack d-flex align-items-center flex-wrap gap-3">
                 ${stackItems
 			.map(
-				(stackItem) => `<li class="stack-item"><img loading="lazy" loading="lazy" src="${stackItem}" alt="${stackItem}"></li>`
+				(stackItem) => `<li class="stack-item"><img src="${stackItem}" alt="${stackItem}"></li>`
 			)
 			.join("")}
               </ul>
             </div>
             <div class="col-lg-7 ms-auto">
               <div class="projects-content__image">
-                <img loading="lazy" loading="lazy" class="img-fluid" src="${data.fullImage}" alt="${data.titlePreview}">
+                <img   class="img-fluid" src="${data.fullImage}" alt="${data.titlePreview}">
               </div>
             </div>
           </div>
@@ -375,8 +375,9 @@ function createTabsItems() {
 	const data = [
 		{
 			tab1: [
-				{ title: 'Figma', percent: '80' },
-				// { title: 'Redu', percent: '60' }
+				{ title: 'Figma', percent: '85' },
+				{ title: 'Sketch', percent: '40' },
+				{ title: 'Photoshop', percent: '20' },
 			]
 		},
 		{
