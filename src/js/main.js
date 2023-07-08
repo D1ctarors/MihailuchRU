@@ -172,15 +172,15 @@ class ItcTabs {
 	}
 	show(elLinkTarget) {
 		const elPaneTarget = this._elPanes[elLinkTarget.dataset.index];
-		const elLinkActive = this._elTabs.querySelector('.tabs__btn_active');
-		const elPaneShow = this._elTabs.querySelector('.tabs__pane_show');
+		const elLinkActive = this._elTabs.querySelector('.tabs__btn-active');
+		const elPaneShow = this._elTabs.querySelector('.tabs__pane-show');
 		if (elLinkTarget === elLinkActive) {
 			return;
 		}
-		elLinkActive ? elLinkActive.classList.remove('tabs__btn_active') : null;
-		elPaneShow ? elPaneShow.classList.remove('tabs__pane_show') : null;
-		elLinkTarget.classList.add('tabs__btn_active');
-		elPaneTarget.classList.add('tabs__pane_show');
+		elLinkActive ? elLinkActive.classList.remove('tabs__btn-active') : null;
+		elPaneShow ? elPaneShow.classList.remove('tabs__pane-show') : null;
+		elLinkTarget.classList.add('tabs__btn-active');
+		elPaneTarget.classList.add('tabs__pane-show');
 		this._elTabs.dispatchEvent(this._eventShow);
 		elLinkTarget.focus();
 	}

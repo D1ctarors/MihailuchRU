@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="/src/css/bootstrap.min.css"> -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
@@ -30,7 +29,7 @@
 	</div>
 
 	<div class="wrapper">
-		<section class="header">
+		<header class="header">
 			<nav class="navbar navbar-expand-lg ">
 				<div class="container-xxl">
 					<a class="navbar-brand" href="https://d1ctarors.github.io/MihailuchRU/">
@@ -67,9 +66,9 @@
 
 				</div>
 			</nav>
-		</section>
-		<section class="main">
+		</header>
 
+		<section class="main">
 			<section class="greeting primary parallax-wrap" id="greeting">
 				<div class="container-xxl ">
 					<div class="row d-flex justify-content-around">
@@ -87,14 +86,7 @@
 						</div>
 						<div
 							class=" col-lg-4 col-md-4 col-sm-5 col-auto d-flex flex-column align-items-center justify-content-center">
-							<!-- <img  class="me-photo-1 d-block" src="./src/img/greeting/me1.jpg" alt="Me-photo"> -->
-
-							<img  class="me-photo-1 d-block"
-								src="./src/img/greeting/me2.png" alt="Me-photo">
-							<!-- <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_3rwasyjy.json"
-								background="transparent" speed="1" style="width: 100%; height: auto;" loop
-								autoplay></lottie-player> -->
-
+							<img class="me-photo-1 d-block" src="./src/img/greeting/me2.png" alt="Me-photo">
 							<div class="greeting__social social-link">
 								<a href="https://vk.com/m1hailuch" target="_blank"><i class="fa-brands fa-vk"></i></a>
 								<a href="https://t.me/D1ctators" target="_blank"><i
@@ -108,20 +100,26 @@
 
 				</div>
 
-				<ul>
-					<li value="5"><img  src="./src/img/projects/stack/html.svg" alt="html">
+				<ol>
+					<li value="5" class="stack-item">
+						<img src="./src/img/projects/stack/html.svg" alt="html">
 					</li>
-					<li value="-5"><img  src="./src/img/projects/stack/css.svg" alt="css">
+					<li value="-5" class="stack-item">
+						<img src="./src/img/projects/stack/css.svg" alt="css">
 					</li>
-					<li value="13"><img  src="./src/img/projects/stack/js.svg" alt="js">
+					<li value="13" class="stack-item">
+						<img src="./src/img/projects/stack/js.svg" alt="js">
 					</li>
-					<li value="-7"><img  src="./src/img/projects/stack/python.svg"
-							alt="python"></li>
-					<li value="5"><img  src="./src/img/projects/stack/django.svg"
-							alt="django"></li>
-					<li value="-8"><img  src="./src/img/projects/stack/bootstrap.svg"
-							alt="bootstrap"></li>
-				</ul>
+					<li value="-7" class="stack-item">
+						<img src="./src/img/projects/stack/python.svg" alt="python">
+					</li>
+					<li value="5" class="stack-item">
+						<img src="./src/img/projects/stack/django.svg" alt="django">
+					</li>
+					<li value="-8" class="stack-item">
+						<img src="./src/img/projects/stack/bootstrap.svg" alt="bootstrap">
+					</li>
+				</ol>
 
 
 			</section>
@@ -136,11 +134,8 @@
 					<div class="row d-flex justify-content-around">
 						<div
 							class="col-lg-4 col-md-5 col-sm-5 d-flex flex-column align-items-center justify-content-center about__photo">
-							<img  src="./src/img/about/me2.jpg" alt="">
-
-							<div class="about__photo-bg">
-								<!-- <img  src="https://avatars.mds.yandex.net/get-yapic/48449/0Ic9IQbL6QH9JmaBTV9CCYWK2k-1/islands-retina-middle" alt=""> -->
-							</div>
+							<img src="./src/img/about/me2.jpg" alt="">
+							<div class="about__photo-bg"></div>
 						</div>
 						<div class="col-lg-5 col-md-5 col-sm-8 d-flex flex-column">
 							<h2>Дмитрий Михайлушкин</h2>
@@ -154,7 +149,7 @@
 										href="https://yandex.ru/search/?text=Международный+день+борьбы+с+коррупцией&clid=2261453&win=568&lr=971"
 										target="_blank">9 декабря 2003</a></li>
 								<li>Website: <a href="" target="_blank">www.mihailuch.ru</a></li>
-								<li>Phone: <a href="tel:+7(952) 604-98-87" target="_blank">+7 (952) 604-98-87</a></li>
+								<li>Phone: <a href="tel:+7(952)604-98-87" target="_blank">+7 (952) 604-98-87</a></li>
 								<li>Study: <a href="https://tusur.ru/ru" target="_blank">ТУСУР</a></li>
 								<li>Mail: <a href="mailto:mihailuch.work@yandex.ru"
 										target="_blank">mihailuch.work@yandex.ru</a></li>
@@ -192,27 +187,16 @@
 						</div>
 						<div class="col-12 ">
 
-
-							<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-								data-bs-target="#contentPortfolioModal">
-								Запустите демо модального окна
-							</button> -->
-
 							<!-- Модальное окно для отображения контента проекта -->
-							<div class="modal fade " id="contentPortfolioModal" tabindex="-1"
-								aria-labelledby="contentPortfolioModalLabel">
+							<div class="modal fade " id="contentPortfolioModal" tabindex="-1">
 								<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
 									<div class="modal-content" id="projects-content"></div>
 								</div>
 							</div>
-
 						</div>
-
-						<div id="projects-wrapper" class="grid">
-
-						</div>
-
-
+						<div id="projects-wrapper" class="grid"></div>
+					</div>
+				</div>
 			</section>
 
 			<section class="skills primary" id="skills">
@@ -230,23 +214,23 @@
 
 							<div class="tabs">
 								<div class="tabs__nav">
-									<button class="tabs__btn tabs__btn_active">Дизайн</button>
+									<button class="tabs__btn tabs__btn-active">Дизайн</button>
 									<button class="tabs__btn">Навыки</button>
 									<button class="tabs__btn">Образование</button>
 								</div>
 								<div class="tabs__content">
 									<!-- Дизайн -->
-									<div class="tabs__pane tabs__pane_show" id="design">
+									<div class="tabs__pane tabs__pane-show">
 										<div class="progress-wrap-line" id="design-progress">
 										</div>
 									</div>
 									<!-- Навыки -->
-									<div class="tabs__pane" id="skills">
+									<div class="tabs__pane">
 										<div class="progress-wrap-line" id="skills-progress">
 										</div>
 									</div>
 									<!-- Учёба -->
-									<div class="tabs__pane" id="school">
+									<div class="tabs__pane">
 										<div class="progress-wrap-line" id="school-progress">
 										</div>
 									</div>
@@ -259,7 +243,6 @@
 							<lottie-player src="./src/img/skills/coder.json" background="transparent" speed="1"
 								style="width: 100%; height: auto;" loop autoplay></lottie-player>
 
-							<!-- <img  class="img-fluid" src="./src/img/skills/skills.png" alt=""> -->
 						</div>
 					</div>
 				</div>
@@ -400,7 +383,7 @@
 						</div>
 					</div>
 
-
+				</div>
 			</section>
 
 			<section class="contacts primary" id="contacts">
@@ -419,7 +402,7 @@
 
 						<div class="col-lg-4 col-md-12">
 							<div class="contacts__wrap-item d-md-flex flex-row flex-lg-column">
-								<a href="tel:+7(952) 604-98-87" target="_blank" class="contacts__item item">
+								<a href="tel:+7(952)604-98-87" target="_blank" class="contacts__item item">
 									<div class="item__img"><i class="fa-solid fa-phone"></i></div>
 									<div class="item__content">
 										<div class="item__title">Телефон</div>
@@ -435,41 +418,44 @@
 									</div>
 								</a>
 
-								<a class="contacts__item item ">
+								<div class="contacts__item item">
 									<div class="item__img"><i class="fa-solid fa-hashtag"></i></div>
 									<div class="item__content">
 										<div class="item__title">Соцсети</div>
 										<div class="social-link contacts__social">
-											<button class="dropdown-item"
-												onclick="window.open('https://vk.com/m1hailuch', '_blank')"><i
-													class="fa-brands fa-vk"></i></button>
-											<button class="dropdown-item"
-												onclick="window.open('https://t.me/D1ctators', '_blank')"><i
-													class="fa-brands fa-telegram"></i></button>
-											<button class="dropdown-item"
-												onclick="window.open('https://www.instagram.com/mihailuch74/', '_blank')"><i
-													class="fa-brands fa-instagram"></i></button>
+											<a class="dropdown-item" href="https://vk.com/m1hailuch" target="_blank"><i
+													class="fa-brands fa-vk"></i></a>
+											<a class="dropdown-item" href="https://t.me/D1ctators" target="_blank"><i
+													class="fa-brands fa-telegram"></i></a>
+											<a class="dropdown-item" href="https://www.instagram.com/mihailuch74/"
+												target="_blank"><i class="fa-brands fa-instagram"></i></a>
 										</div>
 									</div>
-								</a>
+								</div>
 
-								<a class="contacts__item item" id="dropdownMenuLink" data-bs-toggle="dropdown"
-									aria-expanded="false">
-									<div class="item__img"><i class="fa-solid fa-hashtag"></i></div>
+
+								<div class="contacts__item item">
+									<a href="" class="item__link" id="dropdownMenuLink" data-bs-toggle="dropdown"
+										aria-expanded="false">
+										<div class="item__img"><i class="fa-solid fa-hashtag"></i></div>
+									</a>
 									<div class="item__content dropdown-menu">
 										<div class="social-link contacts__social ">
 											<button class="dropdown-item"
-												onclick="window.open('https://vk.com/m1hailuch', '_blank')"><i
-													class="fa-brands fa-vk"></i></button>
+												onclick="window.open('https://vk.com/m1hailuch', '_blank')">
+												<i class="fa-brands fa-vk"></i>
+											</button>
 											<button class="dropdown-item"
-												onclick="window.open('https://t.me/D1ctators', '_blank')"><i
-													class="fa-brands fa-telegram"></i></button>
+												onclick="window.open('https://t.me/D1ctators', '_blank')">
+												<i class="fa-brands fa-telegram"></i>
+											</button>
 											<button class="dropdown-item"
-												onclick="window.open('https://www.instagram.com/mihailuch74/', '_blank')"><i
-													class="fa-brands fa-instagram"></i></button>
+												onclick="window.open('https://www.instagram.com/mihailuch74/', '_blank')">
+												<i class="fa-brands fa-instagram"></i>
+											</button>
 										</div>
 									</div>
-								</a>
+								</div>
 
 
 
@@ -497,7 +483,6 @@
 									<div class="col-12">
 										<textarea class="form-control" id="textArea" rows="6"
 											placeholder="Ваше сообщение"></textarea>
-										<!-- <label class="form-label" for="textArea">Message</label> -->
 									</div>
 								</div>
 
@@ -507,13 +492,13 @@
 							</form>
 						</div>
 					</div>
-
+				</div>
 
 			</section>
 
 		</section>
 
-		<section class="footer" style="padding: 30px 0;">
+		<footer class="footer" style="padding: 30px 0;">
 			<div class="container-xxl">
 				<div class="row">
 					<div class="col-12 d-flex justify-content-center align-items-center">
@@ -524,14 +509,14 @@
 				</div>
 			</div>
 
-		</section>
+		</footer>
 	</div>
 
 	<!-- JQUERY -->
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-	<script type="text/javascript">
+	<script>
 		window.addEventListener('load', function () {
 			var $preloader = document.getElementById('p_prldr');
 			$preloader.style.transition = 'opacity 0.5s';
@@ -547,14 +532,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
 		crossorigin="anonymous"></script>
-	<!-- <script src="/src/bootstrap/dist/js/bootstrap.js"></script> -->
 
 	<!-- SLICK SLIDER -->
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
+	<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 	<!-- ANIMATIONS -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 		AOS.init({
 			duration: 1250,
@@ -562,11 +545,9 @@
 			useClassNames: true,
 			// startEvent: 'DOMContentLoaded',
 		});
+	</script> -->
 
-	</script>
-
-	<!-- JS -->
-
+	<!-- JS LOCAL-->
 	<script src="./src/js/main.js"></script>
 	<script src="./src/js/db.js"></script>
 	<script src="./src/js/slick-slider.js"></script>

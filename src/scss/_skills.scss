@@ -19,13 +19,6 @@
 
 }
 
-.tabs {
-	// border: 1px solid #e0e0e0;
-	// max-width: 350px;
-	// margin-left: auto;
-	// margin-right: auto;
-}
-
 .tabs__nav {
 	display: flex;
 	flex-wrap: wrap;
@@ -52,18 +45,14 @@
 	transition: all .3s ease;
 }
 
-.tabs__btn_active {
+.tabs__btn-active {
 	background: $c-orange;
 	cursor: pointer;
 }
 
-.tabs__btn:not(.tabs__btn_active):hover,
-.tabs__btn:not(.tabs__btn_active):focus {
+.tabs__btn:not(.tabs__btn-active):hover,
+.tabs__btn:not(.tabs__btn-active):focus {
 	background-color: $c-orange;
-}
-
-.tabs__content {
-	// padding: 1rem;
 }
 
 .tabs__pane {
@@ -71,7 +60,7 @@
 	// margin-top: 40px;
 }
 
-.tabs__pane_show {
+.tabs__pane-show {
 	display: block;
 }
 

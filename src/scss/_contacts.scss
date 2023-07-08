@@ -74,6 +74,10 @@
 		display: none;
 	}
 
+	a {
+		color: $c-white !important;
+		text-decoration: none;
+	}
 
 	&__img {
 		border-radius: 50%;
