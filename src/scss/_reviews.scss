@@ -1,0 +1,106 @@
+.reviews {}
+
+.slider-wrapper {
+	display: flex;
+	gap: 15px;
+	justify-content: space-between;
+}
+
+.slide {
+	padding: 0 10px;
+
+	&__wrap {
+
+		height: 250px;
+		display: flex;
+		justify-content: space-around;
+		background: $c-sec;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding: 20px 20px 25px 20px;
+		z-index: 3;
+	}
+
+	&__name {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 22px;
+		text-transform: capitalize;
+		margin-bottom: 10px;
+	}
+
+	&__company {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 24px;
+		margin-bottom: 20px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			width: 80%;
+			height: 1.5px;
+			background: $c-white;
+		}
+	}
+
+	&__review {
+		flex: 1 1 auto;
+
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 24px;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+	}
+
+	&__stars {
+		margin-top: 15px;
+		display: flex;
+		gap: 8px;
+	}
+
+	&__photo {
+		min-width: 33.333%;
+		z-index: 1;
+		// height: 250px;
+		// height: auto;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&::before {
+			content: url("data:image/svg+xml,%3Csvg width='21' height='28' viewBox='0 0 21 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 14L0.750001 27.8564L0.750002 0.143593L21 14Z' fill='%2324263B'/%3E%3C/svg%3E%0A");
+
+			z-index: 2;
+			position: absolute;
+			bottom: 20%;
+			left: -4px;
+			width: auto;
+			height: auto;
+			// background: $c-white;
+		}
+	}
+}

@@ -1,0 +1,75 @@
+.skills {
+	background: $c-sec;
+
+	h2 {
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 35px;
+		margin-bottom: 40px;
+
+		@media (max-width: 768px) {
+			font-size: 28px;
+		}
+
+		span {
+			color: $c-orange;
+		}
+	}
+
+}
+
+.tabs__nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	list-style-type: none;
+	background: inherit;
+	max-width: 375px;
+	margin: 0;
+	// border-bottom: 1px solid #e0e0e0;
+}
+
+.tabs__btn {
+	color: $c-white;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 12px;
+	text-transform: capitalize;
+	border-radius: 4px;
+	background: $c-sec;
+	box-shadow: 0px 0px 24px 0px rgba(15, 16, 24, 0.42);
+	padding: 12px 15px;
+	transition: all .3s ease;
+}
+
+.tabs__btn-active {
+	background: $c-orange;
+	cursor: pointer;
+}
+
+.tabs__btn:not(.tabs__btn-active):hover,
+.tabs__btn:not(.tabs__btn-active):focus {
+	background-color: $c-orange;
+}
+
+.tabs__pane {
+	display: none;
+	// margin-top: 40px;
+}
+
+.tabs__pane-show {
+	display: block;
+}
+
+.progress-wrap-line {
+	margin-top: 40px;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+}
