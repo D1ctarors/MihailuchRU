@@ -17,7 +17,6 @@ const photoshop = './src/img/projects/stack/photoshop.svg';
 
 const dataPortfolioCardItem = [
 
-<<<<<<< HEAD
 	// 15 - SECRET
 	{
 		photoPrewiew: './src/img/projects/15/15_prev.png',
@@ -36,8 +35,6 @@ const dataPortfolioCardItem = [
 		size: ' ', // wide tall big
 	},
 
-=======
->>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
 	// 14 - Mihailuch 3.0
 	{
 		photoPrewiew: './src/img/projects/14/14_prev.png',
@@ -326,11 +323,7 @@ function createPortfolioItem() {
 }
 
 function displayProjectData(data) {
-<<<<<<< HEAD
 	// обработки данных и отображения их в модальном окне
-=======
-	// Ваш код обработки данных и отображения их в модальном окне
->>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
 	const githubLink = data.links?.githubLink || "";
 	const globalLink = data.links?.globalLink || "";
 	const figmaLink = data.links?.figmaLink || "";
@@ -400,15 +393,9 @@ function createTabsItems() {
 	const data = [
 		{
 			tab1: [
-<<<<<<< HEAD
 				{ title: 'Figma', percent: '80' },
 				{ title: 'Sketch', percent: '30' },
 				{ title: 'Photoshop', percent: '10' },
-=======
-				{ title: 'Figma', percent: '85' },
-				{ title: 'Sketch', percent: '40' },
-				{ title: 'Photoshop', percent: '20' },
->>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
 			]
 		},
 		{
@@ -416,27 +403,16 @@ function createTabsItems() {
 				{ title: 'Html', percent: '90' },
 				{ title: 'Css', percent: '90' },
 				{ title: 'JS', percent: '10' },
-<<<<<<< HEAD
 				{ title: 'Python', percent: '70' },
 				{ title: 'Django', percent: '25' },
 				{ title: 'Bootstrap', percent: '60' },
 				{ title: 'SQLite', percent: '5' },
-=======
-				{ title: 'Python', percent: '80' },
-				{ title: 'Django', percent: '25' },
-				{ title: 'Bootstrap', percent: '80' },
-				{ title: 'SQLite', percent: '10' },
->>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
 			]
 		},
 		{
 			tab3: [
 				{ title: 'ТКМП - Компьютерные системы и комплексы', percent: '100' },
-<<<<<<< HEAD
 				{ title: 'ТУСУР - Программная инженерия', percent: '16' },
-=======
-				{ title: 'ТУСУР - Прикладная информатика в экономике', percent: '24' },
->>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
 			]
 		}
 	];
