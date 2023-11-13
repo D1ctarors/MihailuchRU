@@ -192,6 +192,10 @@ body.light-theme #p_prldr {
   top: 0;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: transform 0.3s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   width: 100%;
@@ -542,6 +546,10 @@ body.light-theme #p_prldr {
   overflow: hidden !important;
   position: relative;
   -webkit-transition: all 0.3s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.3s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.3s ease;
 }
 .portfolio__card img {
@@ -555,10 +563,18 @@ body.light-theme #p_prldr {
      object-fit: cover;
   -webkit-filter: brightness(100%);
   -webkit-transition: all 0.3s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.3s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.3s ease;
 }
 .portfolio__card-content {
   -webkit-transition: all 0.3s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.3s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.3s ease;
   position: absolute;
   bottom: 0;
@@ -581,6 +597,10 @@ body.light-theme #p_prldr {
 .portfolio__card:hover img {
   -webkit-filter: brightness(40%);
   -webkit-transition: all 0.3s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.3s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.3s ease;
 }
 .portfolio__card:hover .portfolio__card-content {
@@ -602,6 +622,10 @@ body.light-theme #p_prldr {
 }
 .filter__item {
   -webkit-transition: all 0.2s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.2s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.2s ease;
   display: block;
   font-weight: 400;
@@ -764,6 +788,10 @@ body.light-theme #p_prldr {
 }
 .link-to-source i {
   -webkit-transition: all 0.2s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.2s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.2s ease;
 }
 
@@ -828,6 +856,10 @@ body.light-theme #p_prldr {
           box-shadow: 0px 0px 24px 0px rgba(15, 16, 24, 0.42);
   padding: 12px 15px;
   -webkit-transition: all 0.3s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.3s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.3s ease;
 }
 
@@ -1040,6 +1072,10 @@ body.light-theme #p_prldr {
   color: #fdfff5;
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.2s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.2s ease;
 }
 .item:hover {
@@ -1204,8 +1240,15 @@ body {
   font-family: "Outfit", sans-serif;
   color: #fdfff5 !important;
   -webkit-transition: background-color 0.3s ease !important;
+<<<<<<< HEAD
   transition: background-color 0.3s ease !important;
   -webkit-transition: color 0.3s ease !important;
+=======
+  -o-transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
+  -webkit-transition: color 0.3s ease !important;
+  -o-transition: color 0.3s ease !important;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: color 0.3s ease !important;
 }
 html ::-webkit-scrollbar,
@@ -1222,8 +1265,15 @@ body {
   user-select: none;
   color: #fdfff5 !important;
   -webkit-transition: background-color 0.3s ease !important;
+<<<<<<< HEAD
   transition: background-color 0.3s ease !important;
   -webkit-transition: color 0.3s ease !important;
+=======
+  -o-transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
+  -webkit-transition: color 0.3s ease !important;
+  -o-transition: color 0.3s ease !important;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: color 0.3s ease !important;
 }
 
@@ -1259,8 +1309,15 @@ body.light-theme .header {
   background: #EDEDED !important;
   color: rgba(13, 13, 15, 0.8) !important;
   -webkit-transition: background-color 0.3s ease !important;
+<<<<<<< HEAD
   transition: background-color 0.3s ease !important;
   -webkit-transition: color 0.3s ease !important;
+=======
+  -o-transition: background-color 0.3s ease !important;
+  transition: background-color 0.3s ease !important;
+  -webkit-transition: color 0.3s ease !important;
+  -o-transition: color 0.3s ease !important;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: color 0.3s ease !important;
 }
 body.light-theme .header .prm-btn {
@@ -1452,11 +1509,19 @@ body.light-theme .form-control {
   color: #fdfff5 !important;
   font-size: 16px;
   -webkit-transition: 0.2s ease-in-out;
+<<<<<<< HEAD
+=======
+  -o-transition: 0.2s ease-in-out;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: 0.2s ease-in-out;
 }
 .prm-btn:before {
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.5)));
+<<<<<<< HEAD
+=======
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
   height: 60px;
   width: 50px;
@@ -1474,6 +1539,10 @@ body.light-theme .form-control {
 .prm-btn:hover:before {
   left: 100%;
   -webkit-transition: 0.5s ease-in-out;
+<<<<<<< HEAD
+=======
+  -o-transition: 0.5s ease-in-out;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: 0.5s ease-in-out;
 }
 .prm-btn:focus {
@@ -1502,6 +1571,10 @@ body.light-theme .form-control {
   background: #1F2235;
   text-align: center;
   -webkit-transition: all 0.2s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.2s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.2s ease;
 }
 .social-link a i,
@@ -1514,6 +1587,10 @@ body.light-theme .form-control {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.2s ease;
+<<<<<<< HEAD
+=======
+  -o-transition: all 0.2s ease;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: all 0.2s ease;
 }
 
@@ -1529,6 +1606,10 @@ body.light-theme .form-control {
 }
 .btn-toggle-theme i {
   -webkit-transition: color 0.3s ease !important;
+<<<<<<< HEAD
+=======
+  -o-transition: color 0.3s ease !important;
+>>>>>>> bb866eea10179c613ff96855f8144b848bc2ffc5
   transition: color 0.3s ease !important;
   font-size: 22px;
 }/*# sourceMappingURL=style.css.map */
