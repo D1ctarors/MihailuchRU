@@ -30,7 +30,7 @@ const dataPortfolioCardItem = [
 			globalLink: 'https://d1ctarors.github.io/Studia-secret/',
 		},
 		stack: [html, css, js, sass, figma, bootstrap], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: 'Создание дизайна и адаптивная вёрстка для студии "SECRET"',
+		description: 'Создание дизайна и адаптивной вёрстки для студии "SECRET"',
 		fullImage: './src/img/projects/15/15_full.png',
 		size: ' ', // wide tall big
 	},
@@ -66,7 +66,7 @@ const dataPortfolioCardItem = [
 			globalLink: '',
 		},
 		stack: [python], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: 'Парсер фильмов с сайта lordfilm созданный на python. В своё время послужил инструментом для случайной ddos-атаки).',
+		description: 'Парсер фильмов с сайта lordfilm созданный на python. В своё время послужил инструментом для случайной ddos-атаки). Не работает.',
 		fullImage: './src/img/projects/13/13_full.png',
 		size: ' ', // wide tall big
 	},
@@ -99,10 +99,10 @@ const dataPortfolioCardItem = [
 		links: {
 			githubLink: 'https://github.com/D1ctarors/WebCinema/',
 			figmaLink: 'https://www.figma.com/community/file/1258001017228468531',
-			globalLink: 'https://d1ctarors.github.io/WebCinema/',
+			// globalLink: 'https://d1ctarors.github.io/WebCinema/',
 		},
 		stack: [html, css, sass, js, python, figma, bootstrap, django, sqlite3], //html, css, sass, js, python, figma, bootstrap, django, sqlite3, photoshop
-		description: 'Была задумка создать онлайн-кинотеатр без рекламы, подписок и прочей фигни. Созданы макеты. Веб-приложение создано и посажено на Django. Настроена регистрация и авторизация пользователей. Подключена БД. Реализован фильтр и поиск фильмов по сайту. <br> Проект отменён, из-за недостатка желания.',
+		description: 'Была задумка создать онлайн-кинотеатр без рекламы, подписок и прочей фигни. Создан макет. Основа - Django. Настроена регистрация и авторизация пользователей. Подключена и заполнена БД. Реализован фильтр и поиск фильмов по сайту.',
 		fullImage: './src/img/projects/11/11_full.png',
 		size: 'tall', // wide tall big
 	},
