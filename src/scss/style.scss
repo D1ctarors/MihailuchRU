@@ -1,16 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "reset";
-
-// @import url("/src/bootstrap/scss/bootstrap.scss");
-
-// @import url("/src/bootstrap/scss/_functions.scss");
-// @import url("/src/bootstrap/scss/_variables.scss");
-// @import url("/src/bootstrap/scss/_mixins.scss");
-
-
 @import "mixins";
 @import "preload";
-
 @import "header";
 @import "greeting";
 @import "about";
@@ -18,6 +9,7 @@
 @import "skills";
 @import "reviews";
 @import "contacts";
+@import "footer";
 
 html,
 body {
@@ -50,7 +42,7 @@ body.light-theme {
 	color: $c-granite !important;
 	background: $c-gray !important;
 
-	
+
 
 	.social-link a i,
 	.social-link button i {
@@ -195,7 +187,7 @@ body.light-theme {
 		background: $c-white;
 		color: $c-granite;
 
-		a{
+		a {
 			color: $c-granite !important;
 		}
 
